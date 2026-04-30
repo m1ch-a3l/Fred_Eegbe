@@ -41,7 +41,7 @@ export default function Navbar() {
               color: scrolled ? "var(--navy)" : "white",
             }}
           >
-            Fred Eegbe
+            Rev. Dr. Fred Deegbe
           </span>
           <span
             className="text-xs tracking-widest uppercase transition-colors"

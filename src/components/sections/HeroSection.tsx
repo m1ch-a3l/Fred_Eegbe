@@ -47,7 +47,7 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Fred Eegbe
+          Dr. Fred Deegbe
         </h1>
 
         {/* Tagline */}

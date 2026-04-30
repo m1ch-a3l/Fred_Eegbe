@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ShoppingCart, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Books — Fred Eegbe",
-  description: "Explore Fred Eegbe's books — scripturally grounded, life-transforming reads on purpose, grace, and faith.",
+  title: "Books — Rev. Dr. Fred Deegbe",
+  description: "Explore Rev. Dr. Fred Deegbe's books — scripturally grounded, life-transforming reads on purpose, grace, and faith.",
 };
 
 const books = [
@@ -60,7 +60,7 @@ export default function BooksPage() {
             className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Books by Fred Eegbe
+            Books by Rev. Dr. Fred Deegbe
           </h1>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
             Every book is written as a prayer — that truth would land in your heart and produce lasting fruit.
@@ -106,7 +106,7 @@ export default function BooksPage() {
                       {book.tagline}
                     </p>
                     <span className="mt-6 text-xs relative z-10" style={{ color: "rgba(255,255,255,0.5)" }}>
-                      Fred Eegbe · {book.year}
+                      Rev. Dr. Fred Deegbe · {book.year}
                     </span>
                   </div>
 

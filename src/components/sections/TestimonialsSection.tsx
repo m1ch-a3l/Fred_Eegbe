@@ -2,7 +2,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 const testimonials = [
   {
-    quote: "The teachings of Fred Eegbe transformed my understanding of purpose. For the first time, I understood that my calling was not about performance — it was about relationship with God.",
+    quote: "The teachings of Rev. Dr. Fred Deegbe transformed my understanding of purpose. For the first time, I understood that my calling was not about performance — it was about relationship with God.",
     name: "Amara O.",
     role: "Business Leader, Accra",
     initials: "AO",

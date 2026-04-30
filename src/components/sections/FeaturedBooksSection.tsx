@@ -75,7 +75,7 @@ export default function FeaturedBooksSection() {
                     {book.title}
                   </h3>
                   <span className="mt-3 text-xs relative z-10" style={{ color: "rgba(255,255,255,0.5)" }}>
-                    Fred Eegbe
+                    Rev. Dr. Fred Deegbe
                   </span>
                 </div>
 

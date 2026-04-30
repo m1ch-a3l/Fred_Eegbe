@@ -23,10 +23,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fred Eegbe — Author, Teacher & Ministry Leader",
+  title: "Rev. Dr. Fred Deegbe — Author, Teacher & Ministry Leader",
   description:
-    "Discover books, teachings, and ministry work from Fred Eegbe — a Christian author, teacher, and ministry leader called to transform lives through faith, purpose, and the Word of God.",
-  keywords: ["Christian author", "ministry", "faith", "teachings", "books", "Fred Eegbe"],
+    "Discover books, teachings, and ministry work from Rev. Dr. Fred Deegbe — a Christian author, teacher, and ministry leader called to transform lives through faith, purpose, and the Word of God.",
+  keywords: ["Christian author", "ministry", "faith", "teachings", "books", "Fred Deegbe"],
 };
 
 export default function RootLayout({

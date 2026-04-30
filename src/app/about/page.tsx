@@ -3,8 +3,8 @@ import FadeIn from "@/components/ui/FadeIn";
 import { Heart, BookOpen, Globe, Flame } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — Fred Eegbe",
-  description: "Learn about Fred Eegbe's life, calling, faith journey, and ministry purpose.",
+  title: "About — Dr. Fred Deegbe",
+  description: "Learn about Rev. Dr. Fred Deegbe's life, calling, faith journey, and ministry purpose.",
 };
 
 const milestones = [
@@ -13,7 +13,7 @@ const milestones = [
   { year: "2001", event: "Received the call to ministry while in theological studies." },
   { year: "2005", event: "Planted his first church and began teaching in local communities." },
   { year: "2010", event: "Published his first book, \"Walking in Your Calling\", which reached international audiences." },
-  { year: "2015", event: "Launched Fred Eegbe Ministries, expanding outreach to 20+ nations." },
+  { year: "2015", event: "Launched Fred Deegbe Ministries, expanding outreach to 20+ nations." },
   { year: "2020", event: "Launched online teaching platform, reaching over 50,000 believers globally." },
   { year: "2024", event: "Released third book and began global conference series." },
 ];
@@ -41,7 +41,7 @@ export default function AboutPage() {
             className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            About Fred Eegbe
+            About Dr. Fred Deegbe
           </h1>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
             A man shaped by grace, anchored in scripture, and called to nations.
@@ -73,7 +73,7 @@ export default function AboutPage() {
                   className="text-white font-semibold"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
-                  Fred Eegbe
+                  Rev. Dr. Fred Deegbe
                 </p>
                 <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
                   Author · Pastor · Teacher
@@ -94,7 +94,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
               <p>
-                Fred Eegbe is a Christian author, pastor, and international teacher whose life is a
+                Dr. Fred Deegbe is a Christian author, pastor, and international teacher whose life is a
                 testament to the transforming power of God's grace. Born and raised in Accra, Ghana,
                 Fred grew up in a home where faith was not merely professed — it was practiced daily,
                 through prayer, sacrifice, and community.
@@ -106,7 +106,7 @@ export default function AboutPage() {
               </p>
               <p>
                 After years of theological study, pastoral formation, and Kingdom work, Fred founded
-                Fred Eegbe Ministries — an organization dedicated to equipping believers, reaching
+                Fred Deegbe Ministries — an organization dedicated to equipping believers, reaching
                 communities, and advancing the Gospel across the nations.
               </p>
               <p>
@@ -159,7 +159,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="mt-8 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
-                <p className="font-semibold" style={{ color: "var(--navy)" }}>— Fred Eegbe</p>
+                <p className="font-semibold" style={{ color: "var(--navy)" }}>— Rev. Dr. Fred Deegbe</p>
               </div>
             </div>
           </FadeIn>

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Play, Clock, BookMarked } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Teachings — Fred Eegbe",
-  description: "Sermons, devotionals, and teachings by Fred Eegbe — scripture-based messages to strengthen your faith.",
+  title: "Teachings — Rev. Dr. Fred Deegbe",
+  description: "Sermons, devotionals, and teachings by Rev. Dr. Fred Deegbe — scripture-based messages to strengthen your faith.",
 };
 
 const categories = ["All", "Faith", "Purpose", "Grace", "Prayer", "Leadership", "Devotional"];
