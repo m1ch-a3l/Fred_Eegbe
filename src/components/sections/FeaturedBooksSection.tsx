@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 
 const books = [
   {
-    title: "Hollow Faith in Powerless Religion",
+    title: "Hollow Faith Is Powerless Religion",
     description: "A prophetic call back to authentic, Spirit-filled Christianity — confronting the danger of religious form without transforming power.",
     theme: "Faith & Theology",
     color: "linear-gradient(135deg, #1E3A5F 0%, #0F2544 100%)",
   },
   {
     title: "Thriving in Retirement",
-    description: "A biblical and practical guide to living with purpose, joy, and continued fruitfulness in the retirement season of life.",
+    description: "Staying strong & healthy in your golden years — a biblical and practical guide to living with purpose, joy, and continued fruitfulness.",
     theme: "Life & Purpose",
     color: "linear-gradient(135deg, #2D5016 0%, #1A3009 100%)",
   },
