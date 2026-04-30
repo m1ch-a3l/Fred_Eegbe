@@ -33,7 +33,7 @@ const pillars = [
 ];
 
 const events = [
-  { title: "Kingdom Purpose Conference", location: "Lagos, Nigeria", date: "June 14–16, 2026" },
+  { title: "Kingdom Purpose Conference", location: "Accra, Ghana", date: "June 14–16, 2026" },
   { title: "Faith & Fire Revival", location: "London, UK", date: "August 2–4, 2026" },
   { title: "Transform Africa Summit", location: "Nairobi, Kenya", date: "October 10–12, 2026" },
   { title: "Purpose Alive Women's Retreat", location: "Accra, Ghana", date: "November 7–9, 2026" },
@@ -42,7 +42,7 @@ const events = [
 const testimonies = [
   {
     quote: "The outreach ministry changed my community. Children who had no hope now have scholarships. God's love is real.",
-    name: "Pastor Emmanuel A.", location: "Ibadan, Nigeria",
+    name: "Pastor Emmanuel A.", location: "Kumasi, Ghana",
   },
   {
     quote: "I attended the leadership summit as a confused young man. I left with clarity, identity, and a 5-year plan for my calling.",

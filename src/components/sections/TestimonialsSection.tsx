@@ -4,7 +4,7 @@ const testimonials = [
   {
     quote: "The teachings of Fred Eegbe transformed my understanding of purpose. For the first time, I understood that my calling was not about performance — it was about relationship with God.",
     name: "Amara O.",
-    role: "Business Leader, Lagos",
+    role: "Business Leader, Accra",
     initials: "AO",
   },
   {

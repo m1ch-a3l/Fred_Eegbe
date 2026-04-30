@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const milestones = [
-  { year: "1978", event: "Born in Lagos, Nigeria, into a family rooted in faith and prayer." },
+  { year: "1978", event: "Born in Accra, Ghana, into a family rooted in faith and prayer." },
   { year: "1995", event: "Surrendered his life to Christ at age 17 during a church revival meeting." },
   { year: "2001", event: "Received the call to ministry while in theological studies." },
   { year: "2005", event: "Planted his first church and began teaching in local communities." },
@@ -95,7 +95,7 @@ export default function AboutPage() {
             <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
               <p>
                 Fred Eegbe is a Christian author, pastor, and international teacher whose life is a
-                testament to the transforming power of God's grace. Born and raised in Lagos, Nigeria,
+                testament to the transforming power of God's grace. Born and raised in Accra, Ghana,
                 Fred grew up in a home where faith was not merely professed — it was practiced daily,
                 through prayer, sacrifice, and community.
               </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                   truly knowing Him.
                 </p>
                 <p>
-                  But grace has a way of finding you. At seventeen, in a small, crowded church in Lagos,
+                  But grace has a way of finding you. At seventeen, in a small, crowded church in Accra,
                   I heard a message on Romans 8:28 — that all things work together for the good of those
                   who love God. Something broke in me that night. I realised I had been trying to manage
                   my life when God had been waiting to lead it.

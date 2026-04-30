@@ -65,7 +65,7 @@ export default function ContactPage() {
                 Ministry Base
               </h3>
               <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
-                Lagos, Nigeria<br />
+                Accra, Ghana<br />
                 (With global reach)
               </p>
             </div>
