@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
-import { Heart, BookOpen, Globe, Flame } from "lucide-react";
+import { Scale, BookOpen, Globe, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — Dr. Fred Deegbe",
-  description: "Learn about Rev. Dr. Fred Deegbe's life, calling, faith journey, and ministry purpose.",
+  title: "About — Rev. Dr. Fred P. Deegbe",
+  description: "Learn about Rev. Dr. Fred P. Deegbe — Ghanaian church statesman, theologian, lawyer, and author.",
 };
 
 const milestones = [
-  { year: "1978", event: "Born in Accra, Ghana, into a family rooted in faith and prayer." },
-  { year: "1995", event: "Surrendered his life to Christ at age 17 during a church revival meeting." },
-  { year: "2001", event: "Received the call to ministry while in theological studies." },
-  { year: "2005", event: "Planted his first church and began teaching in local communities." },
-  { year: "2010", event: "Published his first book, \"Walking in Your Calling\", which reached international audiences." },
-  { year: "2015", event: "Launched Fred Deegbe Ministries, expanding outreach to 20+ nations." },
-  { year: "2020", event: "Launched online teaching platform, reaching over 50,000 believers globally." },
-  { year: "2024", event: "Released third book and began global conference series." },
+  { year: "Early", event: "Born in Accra, Ghana, into a family of faith. Pursued law at the University of Ghana, earning an L.L.B." },
+  { year: "Later", event: "Answered the call to ministry and earned a Master of Divinity from Southwestern Baptist Theological Seminary, Fort Worth, USA." },
+  { year: "~1990", event: "Called as Senior Pastor of Calvary Baptist Church, Accra — beginning 33 years of devoted pastoral ministry." },
+  { year: "2000s", event: "Earned a Doctor of Ministry from Asbury Theological Seminary, USA, deepening his theological scholarship." },
+  { year: "2000s", event: "Served as General Secretary of the Christian Council of Ghana, providing national ecumenical leadership." },
+  { year: "2000s", event: "Chaired the Denominational Board of the Ghana Baptist Convention, shaping the direction of Baptist ministry in Ghana." },
+  { year: "2000s", event: "Appointed to serve on the Ghana AIDS Commission and the National Media Commission." },
+  { year: "2022", event: "Published Hollow Faith in Powerless Religion — a prophetic call to authentic, Spirit-filled Christianity." },
+  { year: "2024", event: "Published Thriving in Retirement and retired as Senior Pastor of Calvary Baptist Church after 33 faithful years." },
 ];
 
-const values = [
-  { icon: BookOpen, title: "Scripture-First", desc: "Every teaching, every decision, every direction flows from the Word of God." },
-  { icon: Heart, title: "Authentic Love", desc: "Ministry that serves from love — not performance, not platform, not applause." },
-  { icon: Globe, title: "Global Impact", desc: "A mandate to reach nations — with the Good News, with discipleship, with care." },
-  { icon: Flame, title: "Burning Purpose", desc: "Helping every person find, embrace, and walk in the unique calling God placed within them." },
+const credentials = [
+  { icon: Scale, title: "Theologian & Lawyer", desc: "Holds an L.L.B from the University of Ghana, an M.Div from Southwestern Baptist Theological Seminary (USA), and a D.Min from Asbury Theological Seminary (USA)." },
+  { icon: BookOpen, title: "Author & Teacher", desc: "Published author of two books — Hollow Faith in Powerless Religion and Thriving in Retirement — grounded in decades of theological reflection and pastoral wisdom." },
+  { icon: Globe, title: "Church Statesman", desc: "Former General Secretary of the Christian Council of Ghana and Chair of the Denominational Board of the Ghana Baptist Convention." },
+  { icon: Users, title: "National Voice", desc: "Served on national platforms including the Ghana AIDS Commission and the National Media Commission, bringing a Christian perspective to public life." },
 ];
 
 export default function AboutPage() {
@@ -35,16 +36,16 @@ export default function AboutPage() {
       >
         <FadeIn>
           <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
-            The Story
+            About
           </span>
           <h1
             className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            About Dr. Fred Deegbe
+            Rev. Dr. Fred P. Deegbe
           </h1>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
-            A man shaped by grace, anchored in scripture, and called to nations.
+            Church statesman. Theologian. Lawyer. Author. A life poured out in service to God and Ghana.
           </p>
         </FadeIn>
       </div>
@@ -56,27 +57,21 @@ export default function AboutPage() {
             {/* Author photo placeholder */}
             <div
               className="aspect-[3/4] rounded-2xl flex items-end justify-start relative overflow-hidden"
-              style={{
-                background: "linear-gradient(160deg, var(--deep-blue) 0%, var(--navy) 100%)",
-              }}
+              style={{ background: "linear-gradient(160deg, var(--deep-blue) 0%, var(--navy) 100%)" }}
             >
-              <div className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage: "radial-gradient(circle at 50% 30%, rgba(201,168,76,0.4) 0%, transparent 70%)",
-                }}
+              <div
+                className="absolute inset-0 opacity-20"
+                style={{ backgroundImage: "radial-gradient(circle at 50% 30%, rgba(201,168,76,0.4) 0%, transparent 70%)" }}
               />
               <div
                 className="p-6 w-full"
                 style={{ background: "rgba(15,37,68,0.85)", backdropFilter: "blur(8px)" }}
               >
-                <p
-                  className="text-white font-semibold"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  Rev. Dr. Fred Deegbe
+                <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+                  Rev. Dr. Fred P. Deegbe
                 </p>
                 <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
-                  Author · Pastor · Teacher
+                  Theologian · Lawyer · Church Statesman · Author
                 </p>
               </div>
             </div>
@@ -90,125 +85,111 @@ export default function AboutPage() {
               className="text-3xl font-bold mt-3 mb-6"
               style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}
             >
-              A Life Surrendered to Purpose
+              A Life of Scholarship, Service & Faith
             </h2>
             <div className="space-y-4 text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
               <p>
-                Dr. Fred Deegbe is a Christian author, pastor, and international teacher whose life is a
-                testament to the transforming power of God's grace. Born and raised in Accra, Ghana,
-                Fred grew up in a home where faith was not merely professed — it was practiced daily,
-                through prayer, sacrifice, and community.
+                Rev. Dr. Fred P. Deegbe is a respected Ghanaian church statesman, theologian, and lawyer.
+                He served as General Secretary of the Christian Council of Ghana and recently retired as
+                Senior Pastor of Calvary Baptist Church, Accra, after 33 years of ministry.
               </p>
               <p>
-                At seventeen, during a local church revival, he experienced a personal encounter with
-                God that would redirect the entire trajectory of his life. That night, he surrendered
-                fully to Christ — and has never looked back.
+                He holds an L.L.B from the University of Ghana, a Master of Divinity from Southwestern
+                Baptist Theological Seminary (USA), and a Doctor of Ministry from Asbury Theological
+                Seminary (USA).
               </p>
               <p>
-                After years of theological study, pastoral formation, and Kingdom work, Fred founded
-                Fred Deegbe Ministries — an organization dedicated to equipping believers, reaching
-                communities, and advancing the Gospel across the nations.
+                Dr. Deegbe has chaired the Denominational Board of the Ghana Baptist Convention and
+                served on national platforms including the Ghana AIDS Commission and the National
+                Media Commission.
               </p>
               <p>
-                He is the author of three widely read books, a sought-after conference speaker, and
-                a mentor to hundreds of young leaders across Africa, Europe, and the Americas.
+                He is married to Lady Pastor Joana Deegbe, and together they are blessed with
+                children and grandchildren.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Testimony section */}
+      {/* Credentials */}
       <section className="py-24 px-6" style={{ background: "var(--cream)" }}>
-        <div className="max-w-3xl mx-auto">
-          <FadeIn className="text-center mb-12">
-            <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
-              Personal Testimony
-            </span>
-            <h2
-              className="text-3xl font-bold mt-3"
-              style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}
-            >
-              From Brokenness to Calling
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <div
-              className="p-10 rounded-2xl"
-              style={{ background: "white", border: "1px solid var(--border)", boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
-            >
-              <div className="space-y-5 text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                <p>
-                  "I did not grow up expecting to be a preacher. Honestly, I spent most of my teenage
-                  years running from God — or rather, running from the responsibility that comes with
-                  truly knowing Him.
-                </p>
-                <p>
-                  But grace has a way of finding you. At seventeen, in a small, crowded church in Accra,
-                  I heard a message on Romans 8:28 — that all things work together for the good of those
-                  who love God. Something broke in me that night. I realised I had been trying to manage
-                  my life when God had been waiting to lead it.
-                </p>
-                <p>
-                  I gave Him everything that evening — my ambitions, my fears, my future. And in return,
-                  He gave me a purpose larger than anything I could have imagined for myself.
-                </p>
-                <p>
-                  That is the story I now carry to every platform, every book, every prayer line — that
-                  God is not finished with you. No matter where you are starting from."
-                </p>
-              </div>
-              <div className="mt-8 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
-                <p className="font-semibold" style={{ color: "var(--navy)" }}>— Rev. Dr. Fred Deegbe</p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-24 px-6" style={{ background: "var(--warm-white)" }}>
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-16">
             <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
-              Core Values
+              Credentials & Service
             </span>
             <h2
               className="text-3xl font-bold mt-3"
               style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}
             >
-              What Anchors the Work
+              A Ministry Rooted in Excellence
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {values.map((v, i) => (
-              <FadeIn key={v.title} delay={i * 0.1}>
+            {credentials.map((c, i) => (
+              <FadeIn key={c.title} delay={i * 0.1}>
                 <div
-                  className="p-8 rounded-2xl flex gap-5"
-                  style={{
-                    background: "white",
-                    border: "1px solid var(--border)",
-                    boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
-                  }}
+                  className="p-8 rounded-2xl flex gap-5 h-full"
+                  style={{ background: "white", border: "1px solid var(--border)", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}
                 >
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: "rgba(201,168,76,0.1)" }}
                   >
-                    <v.icon size={22} style={{ color: "var(--gold)" }} />
+                    <c.icon size={22} style={{ color: "var(--gold)" }} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-base mb-2" style={{ color: "var(--navy)", fontFamily: "var(--font-heading)" }}>
-                      {v.title}
+                      {c.title}
                     </h3>
                     <p className="text-sm leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                      {v.desc}
+                      {c.desc}
                     </p>
                   </div>
                 </div>
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Family */}
+      <section className="py-24 px-6" style={{ background: "var(--warm-white)" }}>
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <div
+              className="p-10 rounded-2xl text-center relative overflow-hidden"
+              style={{ background: "var(--deep-blue)", border: "1px solid rgba(255,255,255,0.08)" }}
+            >
+              <div
+                className="absolute inset-0 opacity-10"
+                style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(201,168,76,0.6) 0%, transparent 70%)" }}
+              />
+              <div className="relative z-10">
+                <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
+                  Family
+                </span>
+                <h2
+                  className="text-3xl font-bold mt-3 mb-6 text-white"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  Rooted in Love
+                </h2>
+                <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
+                  Rev. Dr. Deegbe is married to <span className="text-white font-semibold">Lady Pastor Joana Deegbe</span>.
+                  Together they are blessed with children and grandchildren — a living testimony to God's
+                  faithfulness across generations.
+                </p>
+                <div
+                  className="mt-8 pt-6 text-sm italic"
+                  style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-serif)" }}
+                >
+                  "As for me and my house, we will serve the Lord." — Joshua 24:15
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -233,7 +214,7 @@ export default function AboutPage() {
             />
             <div className="flex flex-col gap-10">
               {milestones.map((m, i) => (
-                <FadeIn key={m.year} delay={i * 0.08} className="flex gap-8 items-start">
+                <FadeIn key={i} delay={i * 0.08} className="flex gap-8 items-start">
                   <div
                     className="w-14 text-right text-sm font-semibold flex-shrink-0"
                     style={{ color: "var(--gold)" }}

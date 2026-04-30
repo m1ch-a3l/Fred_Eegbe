@@ -39,7 +39,7 @@ export default function HeroSection() {
           style={{ background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.4)", color: "var(--gold)" }}
         >
           <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--gold)" }} />
-          Author · Teacher · Ministry Leader
+          Theologian · Lawyer · Church Statesman · Author
         </div>
 
         {/* Name */}
@@ -47,7 +47,7 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Dr. Fred Deegbe
+          Rev. Dr. Fred P. Deegbe
         </h1>
 
         {/* Tagline */}

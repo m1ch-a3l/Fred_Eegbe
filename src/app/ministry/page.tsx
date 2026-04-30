@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Mic, Heart, Users, Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ministry — Rev. Dr. Fred Deegbe",
-  description: "Explore the vision, mission, and work of Fred Deegbe Ministries — reaching lives across the nations.",
+  title: "Ministry — Rev. Dr. Fred P. Deegbe",
+  description: "Explore the vision, mission, and work of Fred P. Deegbe Ministries — reaching lives across the nations.",
 };
 
 const pillars = [
@@ -130,7 +130,7 @@ export default function MinistryPage() {
               </h2>
               <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
                 Through anointed teaching, compassionate outreach, and intentional discipleship,
-                Fred Deegbe Ministries exists to equip believers with truth, serve communities with
+                Fred P. Deegbe Ministries exists to equip believers with truth, serve communities with
                 love, and raise the next generation of Kingdom leaders for global impact.
               </p>
             </div>

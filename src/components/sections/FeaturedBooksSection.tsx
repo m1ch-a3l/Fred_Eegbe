@@ -4,22 +4,16 @@ import { ArrowRight } from "lucide-react";
 
 const books = [
   {
-    title: "Walking in Your Calling",
-    description: "A transformative guide to discovering and stepping into the unique purpose God has placed within you — from hesitation to wholehearted obedience.",
-    theme: "Purpose & Calling",
+    title: "Hollow Faith in Powerless Religion",
+    description: "A prophetic call back to authentic, Spirit-filled Christianity — confronting the danger of religious form without transforming power.",
+    theme: "Faith & Theology",
     color: "linear-gradient(135deg, #1E3A5F 0%, #0F2544 100%)",
   },
   {
-    title: "Rooted in Grace",
-    description: "An exploration of God's boundless grace — how to receive it fully, live from it daily, and extend it generously to the world around you.",
-    theme: "Grace & Freedom",
+    title: "Thriving in Retirement",
+    description: "A biblical and practical guide to living with purpose, joy, and continued fruitfulness in the retirement season of life.",
+    theme: "Life & Purpose",
     color: "linear-gradient(135deg, #2D5016 0%, #1A3009 100%)",
-  },
-  {
-    title: "Unshakeable Faith",
-    description: "Practical, scripture-based tools to build a faith that holds firm in every season — through storms, silence, and supernatural breakthrough.",
-    theme: "Faith & Resilience",
-    color: "linear-gradient(135deg, #7A5C20 0%, #4A3810 100%)",
   },
 ];
 
@@ -38,11 +32,11 @@ export default function FeaturedBooksSection() {
             Words That Transform
           </h2>
           <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: "var(--warm-gray)" }}>
-            Each book is a vessel of truth, written to ignite faith and awaken purpose.
+            Each book flows from a lifetime of ministry, scholarship, and devotion to God's Word.
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {books.map((book, i) => (
             <FadeIn key={book.title} delay={i * 0.1}>
               <div
@@ -75,7 +69,7 @@ export default function FeaturedBooksSection() {
                     {book.title}
                   </h3>
                   <span className="mt-3 text-xs relative z-10" style={{ color: "rgba(255,255,255,0.5)" }}>
-                    Rev. Dr. Fred Deegbe
+                    Rev. Dr. Fred P. Deegbe
                   </span>
                 </div>
 
@@ -86,18 +80,18 @@ export default function FeaturedBooksSection() {
                   </p>
                   <div className="flex gap-3 mt-6">
                     <Link
-                      href="/books"
+                      href="/contact"
                       className="flex-1 text-center py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
                       style={{ background: "var(--deep-blue)", color: "white" }}
                     >
-                      Buy Now
+                      Order Now
                     </Link>
                     <Link
                       href="/books"
                       className="flex-1 text-center py-2.5 rounded-lg text-sm font-medium transition-all duration-300"
                       style={{ border: "1px solid var(--border)", color: "var(--warm-gray)" }}
                     >
-                      Read Sample
+                      Learn More
                     </Link>
                   </div>
                 </div>
