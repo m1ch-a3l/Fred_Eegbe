@@ -1,7 +1,9 @@
+"use client";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
-import { ShoppingCart, ArrowRight } from "lucide-react";
+import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
 
 const books = [
   {
@@ -9,48 +11,78 @@ const books = [
     description: "A prophetic call back to authentic, Spirit-filled Christianity — confronting the creeping danger of religious form without transforming power.",
     theme: "Faith & Theology",
     image: "/books/hollow-faith.jpg",
-    accent: "#1E3A5F",
-    reverse: false,
+    bg: "linear-gradient(135deg, #0F2544 0%, #1E3A5F 100%)",
+    accent: "#C9A84C",
   },
   {
     title: "Thriving in Retirement",
     description: "Staying strong & healthy in your golden years — a biblical and practical guide to living with purpose, joy, and continued fruitfulness.",
     theme: "Life & Purpose",
     image: "/books/thriving-retirement.jpg",
-    accent: "#C9A84C",
-    reverse: true,
+    bg: "linear-gradient(135deg, #7A5C20 0%, #C9A84C 100%)",
+    accent: "#fff",
   },
 ];
 
 export default function FeaturedBooksSection() {
+  const [current, setCurrent] = useState(0);
+  const [sliding, setSliding] = useState<"left" | "right" | null>(null);
+
+  const goTo = useCallback((index: number, direction: "left" | "right") => {
+    if (sliding) return;
+    setSliding(direction);
+    setTimeout(() => {
+      setCurrent(index);
+      setSliding(null);
+    }, 400);
+  }, [sliding]);
+
+  const prev = () => {
+    const index = (current - 1 + books.length) % books.length;
+    goTo(index, "right");
+  };
+
+  const next = useCallback(() => {
+    const index = (current + 1) % books.length;
+    goTo(index, "left");
+  }, [current, goTo]);
+
+  // Auto-advance every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  const book = books[current];
+
+  const slideStyle: React.CSSProperties = {
+    transform: sliding === "left"
+      ? "translateX(-60px)"
+      : sliding === "right"
+      ? "translateX(60px)"
+      : "translateX(0)",
+    opacity: sliding ? 0 : 1,
+    transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease",
+  };
+
   return (
     <section
-      className="py-28 px-6 relative overflow-hidden"
+      className="py-20 px-6 relative overflow-hidden"
       style={{ background: "linear-gradient(160deg, var(--navy) 0%, var(--deep-blue) 100%)" }}
     >
-      {/* Background glow orbs */}
+      {/* Ambient glow that changes with book */}
       <div
-        className="absolute pointer-events-none"
+        className="absolute inset-0 pointer-events-none transition-all duration-700"
         style={{
-          width: 600, height: 600, borderRadius: "50%",
-          top: "-10%", right: "-10%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)",
-          filter: "blur(60px)",
-        }}
-      />
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          width: 500, height: 500, borderRadius: "50%",
-          bottom: "-10%", left: "-10%",
-          background: "radial-gradient(circle, rgba(122,158,126,0.06) 0%, transparent 70%)",
-          filter: "blur(60px)",
+          background: current === 0
+            ? "radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%)"
+            : "radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.12) 0%, transparent 60%)",
         }}
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <FadeIn className="text-center mb-20">
+        <FadeIn className="text-center mb-14">
           <span className="text-xs uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>
             Published Works
           </span>
@@ -60,144 +92,172 @@ export default function FeaturedBooksSection() {
           >
             Words That Transform
           </h2>
-          <p className="mt-4 text-lg max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
-            Each book flows from a lifetime of ministry, scholarship, and devotion to God's Word.
-          </p>
         </FadeIn>
 
-        {/* Book feature rows */}
-        <div className="flex flex-col gap-24">
-          {books.map((book, i) => (
-            <FadeIn key={book.title} delay={i * 0.15}>
-              <div className={`flex flex-col ${book.reverse ? "md:flex-row-reverse" : "md:flex-row"} gap-12 md:gap-16 items-center`}>
+        {/* Slider */}
+        <div className="relative flex items-center gap-4 md:gap-8">
+          {/* Prev arrow */}
+          <button
+            onClick={prev}
+            className="flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              color: "white",
+            }}
+            aria-label="Previous book"
+          >
+            <ChevronLeft size={20} />
+          </button>
 
-                {/* Book cover mockup */}
-                <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
+          {/* Slide content */}
+          <div className="flex-1 overflow-hidden">
+            <div
+              className="flex flex-col md:flex-row items-center gap-10 md:gap-16"
+              style={slideStyle}
+            >
+              {/* Book cover */}
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <div
+                  style={{
+                    position: "relative",
+                    filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.7))",
+                    transform: "perspective(900px) rotateY(current === 0 ? 6deg : -6deg)",
+                  }}
+                >
+                  {/* Spine */}
                   <div
-                    className="relative"
-                    style={{
-                      transform: book.reverse ? "perspective(800px) rotateY(-8deg)" : "perspective(800px) rotateY(8deg)",
-                      filter: "drop-shadow(0 40px 60px rgba(0,0,0,0.6))",
-                      transition: "transform 0.4s ease",
-                    }}
-                  >
-                    {/* Book shadow base */}
-                    <div
-                      className="absolute -bottom-4 left-4 right-4 h-8 rounded-full"
-                      style={{
-                        background: "rgba(0,0,0,0.4)",
-                        filter: "blur(16px)",
-                        zIndex: -1,
-                      }}
-                    />
-                    {/* Book spine */}
-                    <div
-                      className="absolute top-0 bottom-0 left-0 w-4 rounded-l-sm"
-                      style={{
-                        background: "rgba(0,0,0,0.35)",
-                        transformOrigin: "left",
-                      }}
-                    />
-                    {/* Cover image */}
-                    <div
-                      className="relative overflow-hidden rounded-r-sm rounded-l-none"
-                      style={{ width: 220, height: 300 }}
-                    >
-                      <Image
-                        src={book.image}
-                        alt={book.title}
-                        fill
-                        className="object-cover object-center"
-                        sizes="220px"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Book info */}
-                <div className="flex-1 min-w-0">
-                  <span
-                    className="text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full inline-block mb-5"
-                    style={{ background: "rgba(201,168,76,0.15)", color: "var(--gold)", border: "1px solid rgba(201,168,76,0.3)" }}
-                  >
-                    {book.theme}
-                  </span>
-                  <h3
-                    className="text-3xl md:text-4xl font-bold text-white mb-5 leading-tight"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {book.title}
-                  </h3>
-                  <p
-                    className="text-base leading-relaxed mb-4"
-                    style={{ color: "rgba(255,255,255,0.65)" }}
-                  >
-                    {book.description}
-                  </p>
-                  <p
-                    className="text-xs mb-8"
-                    style={{ color: "rgba(255,255,255,0.35)", letterSpacing: "0.05em" }}
-                  >
-                    By Rev. Dr. Fred P. Deegbe
-                  </p>
-
-                  {/* Gold divider */}
-                  <div
-                    className="w-12 h-0.5 mb-8"
-                    style={{ background: "var(--gold)" }}
+                    className="absolute top-0 bottom-0 left-0 w-3 rounded-l-sm z-10"
+                    style={{ background: "rgba(0,0,0,0.4)" }}
                   />
-
-                  <div className="flex flex-wrap gap-3">
-                    <Link
-                      href="/contact"
-                      className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
-                      style={{
-                        background: "var(--gold)",
-                        color: "white",
-                        boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
-                      }}
-                    >
-                      <ShoppingCart size={14} />
-                      Order Now
-                    </Link>
-                    <Link
-                      href="/books"
-                      className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
-                      style={{
-                        background: "rgba(255,255,255,0.08)",
-                        border: "1px solid rgba(255,255,255,0.2)",
-                        color: "white",
-                        backdropFilter: "blur(8px)",
-                      }}
-                    >
-                      Learn More
-                    </Link>
+                  {/* Cover */}
+                  <div
+                    className="relative overflow-hidden rounded-r-sm"
+                    style={{ width: 200, height: 280 }}
+                  >
+                    <Image
+                      src={book.image}
+                      alt={book.title}
+                      fill
+                      className="object-cover object-center"
+                      sizes="200px"
+                      priority
+                    />
                   </div>
+                  {/* Reflection */}
+                  <div
+                    className="absolute -bottom-6 left-0 right-0 h-6 rounded-b-sm"
+                    style={{
+                      background: "linear-gradient(to bottom, rgba(255,255,255,0.08), transparent)",
+                      transform: "scaleY(-1)",
+                      opacity: 0.3,
+                      filter: "blur(4px)",
+                    }}
+                  />
                 </div>
               </div>
 
-              {/* Divider between books */}
-              {i < books.length - 1 && (
-                <div
-                  className="mt-24 w-full h-px"
-                  style={{ background: "linear-gradient(to right, transparent, rgba(201,168,76,0.2), transparent)" }}
-                />
-              )}
-            </FadeIn>
+              {/* Book info */}
+              <div className="flex-1 min-w-0 text-center md:text-left">
+                <span
+                  className="text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full inline-block mb-5"
+                  style={{
+                    background: "rgba(201,168,76,0.15)",
+                    color: "var(--gold)",
+                    border: "1px solid rgba(201,168,76,0.3)",
+                  }}
+                >
+                  {book.theme}
+                </span>
+                <h3
+                  className="text-2xl md:text-4xl font-bold text-white mb-5 leading-tight"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {book.title}
+                </h3>
+                <p className="text-base leading-relaxed mb-3" style={{ color: "rgba(255,255,255,0.65)" }}>
+                  {book.description}
+                </p>
+                <p className="text-xs mb-8" style={{ color: "rgba(255,255,255,0.3)", letterSpacing: "0.05em" }}>
+                  By Rev. Dr. Fred P. Deegbe
+                </p>
+
+                <div className="w-10 h-0.5 mb-8 mx-auto md:mx-0" style={{ background: "var(--gold)" }} />
+
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <Link
+                    href="/contact"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
+                    style={{
+                      background: "var(--gold)",
+                      color: "white",
+                      boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
+                    }}
+                  >
+                    <ShoppingCart size={14} />
+                    Order Now
+                  </Link>
+                  <Link
+                    href="/books"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
+                    style={{
+                      background: "rgba(255,255,255,0.08)",
+                      border: "1px solid rgba(255,255,255,0.2)",
+                      color: "white",
+                    }}
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Next arrow */}
+          <button
+            onClick={next}
+            className="flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              color: "white",
+            }}
+            aria-label="Next book"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-3 mt-12">
+          {books.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i, i > current ? "left" : "right")}
+              className="transition-all duration-300"
+              style={{
+                width: i === current ? 28 : 8,
+                height: 8,
+                borderRadius: 4,
+                background: i === current ? "var(--gold)" : "rgba(255,255,255,0.2)",
+                border: "none",
+                cursor: "pointer",
+              }}
+              aria-label={`Go to book ${i + 1}`}
+            />
           ))}
         </div>
 
-        {/* View all CTA */}
-        <FadeIn delay={0.3} className="text-center mt-20">
+        {/* View all */}
+        <div className="text-center mt-10">
           <Link
             href="/books"
-            className="inline-flex items-center gap-2 text-sm font-medium transition-all hover:gap-3"
-            style={{ color: "var(--gold)" }}
+            className="text-sm font-medium transition-all hover:opacity-70"
+            style={{ color: "rgba(255,255,255,0.45)" }}
           >
-            Explore All Books
-            <ArrowRight size={16} />
+            View all books →
           </Link>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );
