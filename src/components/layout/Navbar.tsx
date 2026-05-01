@@ -1,12 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 const links = [
   { href: "/about", label: "About" },
   { href: "/ministry", label: "Ministry" },
   { href: "/books", label: "Books" },
+  { href: "/store", label: "Store" },
   { href: "/teachings", label: "Teachings" },
   { href: "/contact", label: "Contact" },
 ];
@@ -14,6 +16,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { count } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -36,10 +39,7 @@ export default function Navbar() {
         <Link href="/" className="flex flex-col leading-tight group">
           <span
             className="font-bold text-xl tracking-wide transition-colors"
-            style={{
-              fontFamily: "var(--font-heading)",
-              color: scrolled ? "var(--navy)" : "white",
-            }}
+            style={{ fontFamily: "var(--font-heading)", color: scrolled ? "var(--navy)" : "white" }}
           >
             Rev. Dr. Fred P. Deegbe
           </span>
@@ -52,7 +52,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -63,30 +63,57 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+
+          {/* Cart icon */}
+          <Link href="/store/checkout" className="relative" aria-label="Cart">
+            <ShoppingCart
+              size={20}
+              style={{ color: scrolled ? "var(--charcoal)" : "rgba(255,255,255,0.9)" }}
+            />
+            {count > 0 && (
+              <span
+                className="absolute -top-2 -right-2 w-4 h-4 rounded-full text-white flex items-center justify-center"
+                style={{ background: "var(--gold)", fontSize: 9, fontWeight: 700 }}
+              >
+                {count}
+              </span>
+            )}
+          </Link>
+
           <Link
             href="/contact"
             className="text-sm font-medium px-5 py-2 rounded-lg transition-all duration-300"
-            style={{
-              background: "var(--gold)",
-              color: "white",
-            }}
+            style={{ background: "var(--gold)", color: "white" }}
           >
             Connect
           </Link>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 rounded-lg"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? (
-            <X size={22} style={{ color: scrolled ? "var(--navy)" : "white" }} />
-          ) : (
-            <Menu size={22} style={{ color: scrolled ? "var(--navy)" : "white" }} />
-          )}
-        </button>
+        {/* Mobile: cart + toggle */}
+        <div className="md:hidden flex items-center gap-3">
+          <Link href="/store/checkout" className="relative" aria-label="Cart">
+            <ShoppingCart size={20} style={{ color: scrolled ? "var(--navy)" : "white" }} />
+            {count > 0 && (
+              <span
+                className="absolute -top-2 -right-2 w-4 h-4 rounded-full text-white flex items-center justify-center"
+                style={{ background: "var(--gold)", fontSize: 9, fontWeight: 700 }}
+              >
+                {count}
+              </span>
+            )}
+          </Link>
+          <button
+            className="p-2 rounded-lg"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? (
+              <X size={22} style={{ color: scrolled ? "var(--navy)" : "white" }} />
+            ) : (
+              <Menu size={22} style={{ color: scrolled ? "var(--navy)" : "white" }} />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

@@ -3,6 +3,7 @@ import { Montserrat, DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const montserrat = Montserrat({
   variable: "--font-heading",
@@ -35,9 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${dmSans.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-body), sans-serif" }}>
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
