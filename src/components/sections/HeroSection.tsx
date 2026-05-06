@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { BookOpen, Play, ChevronDown } from "lucide-react";
+import AuthorPortrait from "@/components/ui/AuthorPortrait";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-visible pb-24">
       {/* Background gradient */}
       <div
         className="absolute inset-0 z-0"
@@ -107,11 +108,14 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      {/* Scroll indicator — moved up to make room for portrait */}
+      <div className="absolute bottom-36 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
         <span className="text-xs uppercase tracking-widest text-white">Scroll</span>
         <ChevronDown size={16} className="text-white animate-bounce" />
       </div>
+
+      {/* Author portrait — overlaps into the section below */}
+      <AuthorPortrait />
     </section>
   );
 }
