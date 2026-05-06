@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Play, ChevronDown } from "lucide-react";
+import { BookOpen, ChevronDown } from "lucide-react";
 import AuthorPortrait from "@/components/ui/AuthorPortrait";
 
 export default function HeroSection() {
@@ -81,7 +81,7 @@ export default function HeroSection() {
             Read the Books
           </Link>
           <Link
-            href="/ministry"
+            href="/contact"
             className="flex items-center gap-2 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
             style={{
               background: "rgba(255,255,255,0.1)",
@@ -90,20 +90,7 @@ export default function HeroSection() {
               backdropFilter: "blur(8px)",
             }}
           >
-            Explore the Ministry
-          </Link>
-          <Link
-            href="/teachings"
-            className="flex items-center gap-2 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
-            style={{
-              background: "rgba(255,255,255,0.1)",
-              border: "1px solid rgba(255,255,255,0.3)",
-              color: "white",
-              backdropFilter: "blur(8px)",
-            }}
-          >
-            <Play size={14} />
-            Watch Teachings
+            Get in Touch
           </Link>
         </div>
       </div>
