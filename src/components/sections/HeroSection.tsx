@@ -65,16 +65,6 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Top-right contact hint */}
-          <div className="hidden md:flex flex-col items-end gap-1 text-right">
-            <Link
-              href="/contact"
-              className="text-xs uppercase tracking-widest transition-opacity hover:opacity-100"
-              style={{ color: "rgba(255,255,255,0.4)" }}
-            >
-              Contact ↗
-            </Link>
-          </div>
         </div>
 
         {/* Spacer */}
