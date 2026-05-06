@@ -2,7 +2,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function WelcomeSection() {
   return (
-    <section className="pt-40 pb-28 px-6" style={{ background: "var(--warm-white)" }}>
+    <section className="py-28 px-6" style={{ background: "var(--warm-white)" }}>
       <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
           <span

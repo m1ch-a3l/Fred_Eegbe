@@ -1,108 +1,128 @@
 import Link from "next/link";
-import { BookOpen, ChevronDown } from "lucide-react";
-import AuthorPortrait from "@/components/ui/AuthorPortrait";
+import Image from "next/image";
+import { BookOpen } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-visible pb-24">
-      {/* Background gradient */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(135deg, #0F2544 0%, #1E3A5F 40%, #2D5016 100%)",
-        }}
-      />
-
-      {/* Subtle texture overlay */}
-      <div
-        className="absolute inset-0 z-0 opacity-20"
-        style={{
-          backgroundImage: `radial-gradient(circle at 20% 80%, rgba(201,168,76,0.3) 0%, transparent 50%),
-                            radial-gradient(circle at 80% 20%, rgba(122,158,126,0.2) 0%, transparent 50%)`,
-        }}
-      />
-
-      {/* Light rays */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-px opacity-30 z-0"
-        style={{
-          height: "60%",
-          background: "linear-gradient(to bottom, rgba(201,168,76,0.8), transparent)",
-          filter: "blur(1px)",
-          boxShadow: "0 0 60px 30px rgba(201,168,76,0.15)",
-        }}
-      />
-
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Eyebrow */}
+    <section
+      className="relative h-screen min-h-[640px] overflow-hidden"
+      style={{ background: "#0B1628" }}
+    >
+      {/* Author photo — bleeds from center-right to fill the frame */}
+      <div className="absolute inset-0 md:left-[25%]">
+        <Image
+          src="/profile/author.png"
+          alt="Rev. Dr. Fred P. Deegbe"
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 768px) 100vw, 75vw"
+          priority
+        />
+        {/* Left fade — blends photo into dark background */}
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs uppercase tracking-widest font-medium mb-8"
-          style={{ background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.4)", color: "var(--gold)" }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--gold)" }} />
-          Theologian · Lawyer · Church Statesman · Author
+          className="absolute inset-y-0 left-0 w-3/4"
+          style={{
+            background: "linear-gradient(to right, #0B1628 5%, rgba(11,22,40,0.7) 55%, transparent 100%)",
+          }}
+        />
+        {/* Bottom fade — makes name text readable */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/2"
+          style={{
+            background: "linear-gradient(to top, #0B1628 30%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      {/* Subtle vertical grid lines */}
+      <div
+        className="absolute inset-0 z-0 hidden md:block"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px)",
+          backgroundSize: "25% 100%",
+        }}
+      />
+
+      {/* All content */}
+      <div className="relative z-10 flex flex-col h-full px-8 md:px-14 pt-28 pb-10">
+
+        {/* Top — role + short bio */}
+        <div className="flex justify-between items-start gap-8">
+          <div className="max-w-xs">
+            <span
+              className="text-xs uppercase tracking-[0.22em] font-semibold"
+              style={{ color: "var(--gold)" }}
+            >
+              Author · Church Statesman · Accra, Ghana
+            </span>
+            <p
+              className="mt-5 text-xs leading-relaxed uppercase tracking-wide hidden md:block"
+              style={{ color: "rgba(255,255,255,0.45)", maxWidth: "260px" }}
+            >
+              Theologian, lawyer, and pastor who has spent over three decades
+              equipping believers and transforming lives through the Word of God.
+            </p>
+          </div>
+
+          {/* Top-right contact hint */}
+          <div className="hidden md:flex flex-col items-end gap-1 text-right">
+            <Link
+              href="/contact"
+              className="text-xs uppercase tracking-widest transition-opacity hover:opacity-100"
+              style={{ color: "rgba(255,255,255,0.4)" }}
+            >
+              Contact ↗
+            </Link>
+          </div>
         </div>
 
-        {/* Name */}
-        <h1
-          className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          Rev. Dr. Fred P. Deegbe
-        </h1>
+        {/* Spacer */}
+        <div className="flex-1" />
 
-        {/* Tagline */}
-        <p
-          className="text-xl md:text-2xl mb-4 font-light"
-          style={{ color: "rgba(255,255,255,0.85)", fontFamily: "var(--font-serif)" }}
-        >
-          Equipping Believers. Transforming Lives. Advancing the Kingdom.
-        </p>
-
-        {/* Scripture quote */}
-        <div
-          className="inline-block px-6 py-3 rounded-lg mb-12 max-w-xl mx-auto"
-          style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(201,168,76,0.25)" }}
-        >
-          <p className="text-sm italic" style={{ color: "rgba(255,255,255,0.7)", fontFamily: "var(--font-serif)" }}>
-            "The Spirit of the Lord is on me, because he has anointed me to proclaim good news..."
-          </p>
-          <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>Luke 4:18</p>
-        </div>
-
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
-            href="/books"
-            className="flex items-center gap-2 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
-            style={{ background: "var(--gold)", color: "white", boxShadow: "0 4px 20px rgba(201,168,76,0.4)" }}
-          >
-            <BookOpen size={16} />
-            Read the Books
-          </Link>
-          <Link
-            href="/contact"
-            className="flex items-center gap-2 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
+        {/* Bottom — huge name + CTAs */}
+        <div className="flex flex-col gap-5">
+          <h1
+            className="font-bold leading-[0.88] uppercase"
             style={{
-              background: "rgba(255,255,255,0.1)",
-              border: "1px solid rgba(255,255,255,0.3)",
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(3rem, 9.5vw, 8.5rem)",
               color: "white",
-              backdropFilter: "blur(8px)",
+              letterSpacing: "-0.02em",
             }}
           >
-            Get in Touch
-          </Link>
+            Rev. Dr. Fred
+            <br />
+            P. Deegbe
+          </h1>
+
+          <div className="flex flex-wrap gap-4 items-center pb-2">
+            <Link
+              href="/books"
+              className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
+              style={{
+                background: "var(--gold)",
+                color: "white",
+                boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
+              }}
+            >
+              <BookOpen size={15} />
+              Read the Books
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-medium transition-opacity hover:opacity-100"
+              style={{
+                color: "rgba(255,255,255,0.55)",
+                textDecoration: "underline",
+                textUnderlineOffset: "5px",
+              }}
+            >
+              About the Author
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* Scroll indicator — moved up to make room for portrait */}
-      <div className="absolute bottom-36 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <span className="text-xs uppercase tracking-widest text-white">Scroll</span>
-        <ChevronDown size={16} className="text-white animate-bounce" />
-      </div>
-
-      {/* Author portrait — overlaps into the section below */}
-      <AuthorPortrait />
     </section>
   );
 }
