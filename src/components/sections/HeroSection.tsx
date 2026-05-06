@@ -8,28 +8,28 @@ export default function HeroSection() {
       className="relative h-screen min-h-[640px] overflow-hidden"
       style={{ background: "#0B1628" }}
     >
-      {/* Author photo — bleeds from center-right to fill the frame */}
-      <div className="absolute inset-0 md:left-[25%]">
+      {/* Author photo — right half only, contained so full person is visible */}
+      <div className="absolute top-0 bottom-0 right-0 w-full md:w-[52%]">
         <Image
           src="/profile/author.png"
           alt="Rev. Dr. Fred P. Deegbe"
           fill
-          className="object-cover object-top"
-          sizes="(max-width: 768px) 100vw, 75vw"
+          className="object-contain object-center object-top"
+          sizes="(max-width: 768px) 100vw, 52vw"
           priority
         />
-        {/* Left fade — blends photo into dark background */}
+        {/* Left fade — blends into dark background */}
         <div
-          className="absolute inset-y-0 left-0 w-3/4"
+          className="absolute inset-y-0 left-0 w-1/2"
           style={{
-            background: "linear-gradient(to right, #0B1628 5%, rgba(11,22,40,0.7) 55%, transparent 100%)",
+            background: "linear-gradient(to right, #0B1628 0%, transparent 100%)",
           }}
         />
-        {/* Bottom fade — makes name text readable */}
+        {/* Bottom fade — keeps name text readable */}
         <div
-          className="absolute inset-x-0 bottom-0 h-1/2"
+          className="absolute inset-x-0 bottom-0 h-2/5"
           style={{
-            background: "linear-gradient(to top, #0B1628 30%, transparent 100%)",
+            background: "linear-gradient(to top, #0B1628 40%, transparent 100%)",
           }}
         />
       </div>
