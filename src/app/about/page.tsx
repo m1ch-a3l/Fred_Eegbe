@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 import { Scale, BookOpen, Globe, Users } from "lucide-react";
 
@@ -54,18 +55,21 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <FadeIn direction="left">
-            {/* Author photo placeholder */}
-            <div
-              className="aspect-[3/4] rounded-2xl flex items-end justify-start relative overflow-hidden"
-              style={{ background: "linear-gradient(160deg, var(--deep-blue) 0%, var(--navy) 100%)" }}
+            <div className="aspect-[3/4] rounded-2xl relative overflow-hidden flex items-end"
+              style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.18)" }}
             >
-              <div
-                className="absolute inset-0 opacity-20"
-                style={{ backgroundImage: "radial-gradient(circle at 50% 30%, rgba(201,168,76,0.4) 0%, transparent 70%)" }}
+              <Image
+                src="/profile/author.png"
+                alt="Rev. Dr. Fred P. Deegbe"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
+              {/* Name caption overlay */}
               <div
-                className="p-6 w-full"
-                style={{ background: "rgba(15,37,68,0.85)", backdropFilter: "blur(8px)" }}
+                className="relative z-10 p-6 w-full"
+                style={{ background: "linear-gradient(to top, rgba(15,37,68,0.92) 0%, transparent 100%)" }}
               >
                 <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
                   Rev. Dr. Fred P. Deegbe
