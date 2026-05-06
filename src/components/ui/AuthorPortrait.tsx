@@ -24,7 +24,7 @@ export default function AuthorPortrait() {
             style={{ background: "linear-gradient(135deg, #1E3A5F 0%, #0F2544 100%)" }}>
             {!imgError ? (
               <Image
-                src="/author.jpg"
+                src="/profile/author.png"
                 alt="Rev. Dr. Fred P. Deegbe"
                 fill
                 className="object-cover object-top"
