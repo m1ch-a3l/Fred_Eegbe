@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import FadeIn from "@/components/ui/FadeIn";
-import { Mail, MapPin, Send, Check, Heart } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Check, Heart } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "", type: "general" });
@@ -53,6 +53,19 @@ export default function ContactPage() {
               </h3>
               <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
                 hello@fredeegbe.com
+              </p>
+            </div>
+
+            <div
+              className="p-7 rounded-2xl"
+              style={{ background: "var(--cream)", border: "1px solid var(--border)" }}
+            >
+              <Phone size={20} className="mb-3" style={{ color: "var(--gold)" }} />
+              <h3 className="font-semibold text-sm mb-1" style={{ color: "var(--navy)", fontFamily: "var(--font-heading)" }}>
+                Phone
+              </h3>
+              <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
+                +233 XX XXX XXXX
               </p>
             </div>
 
