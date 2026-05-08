@@ -81,9 +81,9 @@ export default function AboutPage() {
         style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%)" }}
       >
         <FadeIn>
-          <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
+          {/* <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
             About
-          </span>
+          </span> */}
           <h1
             className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
