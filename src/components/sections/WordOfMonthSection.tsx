@@ -68,7 +68,7 @@ export default function WordOfMonthSection() {
                 "Who dares despise the day of small things?"
               </p>
               <p className="text-sm mt-1 font-semibold" style={{ color: "var(--gold)" }}>
-                Zechariah 4:10
+                Zechariah 4:10 (NKJV)
               </p>
             </div>
 
