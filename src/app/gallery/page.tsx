@@ -13,16 +13,19 @@ type Photo = {
 };
 
 const photos: Photo[] = [
+  { src: "/gallery/cbc-ps-141.jpg",        alt: "Calvary Baptist Church — Service",       category: "Ministry" },
   { src: "/gallery/cbc-ps-146.jpg",        alt: "Calvary Baptist Church — Service",       category: "Ministry" },
   { src: "/gallery/cbc-ps-150.jpg",        alt: "Calvary Baptist Church — Congregation",  category: "Ministry" },
-  { src: "/gallery/photo-2023-37.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
-  { src: "/gallery/photo-2023-60.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
   { src: "/gallery/ministry-occasion.jpeg",alt: "Ministry Occasion",                      category: "Ministry" },
-  { src: "/gallery/img-2632.jpg",          alt: "Event — Ministry Gathering",             category: "Events" },
+  { src: "/gallery/photo-2023-08.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
+  { src: "/gallery/photo-2023-19.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
+  { src: "/gallery/photo-2023-27.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
+  { src: "/gallery/photo-2023-37.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
+  { src: "/gallery/photo-2023-49.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
+  { src: "/gallery/photo-2023-60.jpg",     alt: "Ministry — 2023",                        category: "Ministry" },
   { src: "/gallery/img-2661.jpg",          alt: "Event — Ministry Gathering",             category: "Events" },
-  { src: "/gallery/img-2666.jpg",          alt: "Event — Ministry Gathering",             category: "Events" },
-  { src: "/gallery/photo-04-of-27.jpg",   alt: "Conference — Christian Council",          category: "Conferences" },
-  { src: "/gallery/photo-07-of-27.jpg",   alt: "Conference — Christian Council",          category: "Conferences" },
+  { src: "/gallery/photo-04-of-27.jpg",    alt: "Conference — Christian Council",         category: "Conferences" },
+  { src: "/gallery/photo-14-of-27.jpg",    alt: "Conference — Christian Council",         category: "Conferences" },
 ];
 
 export default function GalleryPage() {
