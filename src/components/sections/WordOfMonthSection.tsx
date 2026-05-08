@@ -73,7 +73,7 @@ export default function WordOfMonthSection() {
             </div>
 
             <Link
-              href="/teachings"
+              href="#"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-70"
               style={{ color: "var(--deep-blue)" }}
             >
