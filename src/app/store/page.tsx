@@ -25,6 +25,78 @@ const books = [
     description: "Staying strong & healthy in your golden years — a biblical and practical guide to living with purpose, joy, and continued fruitfulness.",
     details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
   },
+  {
+    id: "forgive-god",
+    title: "Forgive God!",
+    theme: "Faith & Healing",
+    price: 70,
+    image: "/books/forgive-god.png",
+    description: "Wrestling honestly with pain, disappointment, and divine silence — a compassionate guide toward honest faith and genuine healing.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "the-sticky-couple",
+    title: "The Sticky Couple",
+    theme: "Marriage & Family",
+    price: 70,
+    image: "/books/the-sticky-couple.png",
+    description: "Building a marriage that holds through every season — scriptural wisdom for couples who choose to hold on together through every trial.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "born-to-blossom",
+    title: "Born to Blossom",
+    theme: "Identity & Purpose",
+    price: 65,
+    image: "/books/born-to-blossom.png",
+    description: "Discovering the fullness of who God made you to be — a call to flourish beyond limitation and step into your God-given potential.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "stranger-in-my-own-country",
+    title: "Stranger in My Own Country",
+    theme: "Identity & Culture",
+    price: 70,
+    image: "/books/stranger-country.png",
+    description: "Navigating faith, identity, and belonging in a changing world — remaining anchored when the ground beneath us shifts.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "when-friends-fight",
+    title: "When Friends Fight",
+    theme: "Relationships",
+    price: 65,
+    image: "/books/when-friends-fight.png",
+    description: "Healing and restoring broken relationships — pastoral wisdom for understanding conflict and walking the path of genuine reconciliation.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "building-a-christian-home",
+    title: "Building a Christian Home",
+    theme: "Family & Marriage",
+    price: 65,
+    image: "/books/building-a-christian-home.png",
+    description: "Laying foundations that will stand the test of time — timeless wisdom for families navigating modern life with biblical truth.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "empowered-meaningful",
+    title: "Empowered to Make Life Meaningful",
+    theme: "Purpose & Growth",
+    price: 65,
+    image: "/books/empowered-meaningful.png",
+    description: "Living with intention, passion, and lasting impact — moving beyond routine existence into a life of genuine significance.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
+  {
+    id: "the-three-powers",
+    title: "The Three Powers",
+    theme: "Spiritual Life",
+    price: 65,
+    image: "/books/the-three-powers.png",
+    description: "Understanding the forces that shape your spiritual destiny — equipping believers to walk in genuine biblical authority.",
+    details: ["Hardcover & Paperback", "Available for delivery across Ghana", "Signed copies available on request"],
+  },
 ];
 
 function AddToCartButton({ book }: { book: typeof books[0] }) {
@@ -92,7 +164,7 @@ export default function StorePage() {
 
       {/* Books grid */}
       <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {books.map((book, i) => (
             <FadeIn key={book.id} delay={i * 0.1}>
               <div
@@ -104,7 +176,7 @@ export default function StorePage() {
                 }}
               >
                 {/* Cover image */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
                   <Image
                     src={book.image}
                     alt={book.title}
