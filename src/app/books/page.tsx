@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const books = [
+  // ── Featured 5 (detailed layout) ──────────────────────────────────────────
   {
     title: "Hollow Faith Is Powerless Religion",
     theme: "Faith & Theology",
@@ -29,13 +30,13 @@ const books = [
     keyMessage: "Retirement is not the end of your story — it is the beginning of a chapter that only a lifetime of faithfulness could have written.",
   },
   {
-    title: "Forgive God!",
-    theme: "Faith & Healing",
-    image: "/books/forgive-god.png",
-    tagline: "Wrestling honestly with pain, disappointment, and divine silence.",
+    title: "The Three Powers",
+    theme: "Spiritual Life",
+    image: "/books/the-three-powers.png",
+    tagline: "Understanding the forces that shape your spiritual destiny.",
     description:
-      "In this courageous and pastoral work, Rev. Dr. Deegbe addresses one of the most hidden struggles of the Christian life — the anger, confusion, and silent resentment we can carry toward God when life doesn't go as expected. With compassion and theological depth, he guides readers toward honest faith and genuine healing.",
-    keyMessage: "God is not threatened by your honesty. He invites you to bring your broken places — and find in Him the grace to be made whole.",
+      "In this theologically rich exploration, Rev. Dr. Deegbe unpacks the three great powers at work in every believer's life — the power of God, the power of the enemy, and the power of personal choice. He equips readers to understand the spiritual landscape they inhabit and to walk in genuine biblical authority.",
+    keyMessage: "The believer who understands the powers at work in their life is the believer who walks not in fear — but in confident, Christ-centred authority.",
   },
   {
     title: "The Sticky Couple",
@@ -47,15 +48,6 @@ const books = [
     keyMessage: "A sticky couple isn't one without problems — it's one that has discovered the grace of holding on, together, through all of them.",
   },
   {
-    title: "Born to Blossom",
-    theme: "Identity & Purpose",
-    image: "/books/born-to-blossom.png",
-    tagline: "Discovering the fullness of who God made you to be.",
-    description:
-      "Every person carries a God-given potential that the pressures of life can bury. In this encouraging work, Rev. Dr. Deegbe speaks to those who feel stuck, overlooked, or unsure of their purpose — calling them back to the divine design planted within them and equipping them to flourish in every season.",
-    keyMessage: "You were not created to merely survive. You were born to blossom — and God's intention for your life is abundance, not limitation.",
-  },
-  {
     title: "Stranger in My Own Country",
     theme: "Identity & Culture",
     image: "/books/stranger-country.png",
@@ -63,6 +55,26 @@ const books = [
     description:
       "A reflective and prophetic work in which Rev. Dr. Deegbe grapples with the tension of living as a person of faith in a world that feels increasingly foreign to Christian values. He explores questions of identity, cultural displacement, and what it means to remain anchored when the ground beneath us shifts.",
     keyMessage: "The Christian was never promised comfort in the world — but he was promised a citizenship that no earthly change can revoke.",
+  },
+
+  // ── Remaining 5 (card grid) ───────────────────────────────────────────────
+  {
+    title: "Forgive God!",
+    theme: "Faith & Healing",
+    image: "/books/forgive-god.png",
+    tagline: "Wrestling honestly with pain, disappointment, and divine silence.",
+    description:
+      "In this courageous and pastoral work, Rev. Dr. Deegbe addresses one of the most hidden struggles of the Christian life — the anger, confusion, and silent resentment we can carry toward God when life doesn't go as expected. With compassion and theological depth, he guides readers toward honest faith and genuine healing.",
+    keyMessage: "God is not threatened by your honesty. He invites you to bring your broken places — and find in Him the grace to be made whole.",
+  },
+  {
+    title: "Born to Blossom",
+    theme: "Identity & Purpose",
+    image: "/books/born-to-blossom.png",
+    tagline: "Discovering the fullness of who God made you to be.",
+    description:
+      "Every person carries a God-given potential that the pressures of life can bury. In this encouraging work, Rev. Dr. Deegbe speaks to those who feel stuck, overlooked, or unsure of their purpose — calling them back to the divine design planted within them and equipping them to flourish in every season.",
+    keyMessage: "You were not created to merely survive. You were born to blossom — and God's intention for your life is abundance, not limitation.",
   },
   {
     title: "When Friends Fight",
@@ -90,15 +102,6 @@ const books = [
     description:
       "This inspiring work challenges readers to move beyond routine existence into a life of genuine significance. Rev. Dr. Deegbe draws on scripture and experience to help readers identify their calling, overcome the paralysis of purposelessness, and live each day as a meaningful offering to God and the world.",
     keyMessage: "A meaningful life is not a matter of chance — it is the fruit of deliberate surrender to the One who created you with purpose.",
-  },
-  {
-    title: "The Three Powers",
-    theme: "Spiritual Life",
-    image: "/books/the-three-powers.png",
-    tagline: "Understanding the forces that shape your spiritual destiny.",
-    description:
-      "In this theologically rich exploration, Rev. Dr. Deegbe unpacks the three great powers at work in every believer's life — the power of God, the power of the enemy, and the power of personal choice. He equips readers to understand the spiritual landscape they inhabit and to walk in genuine biblical authority.",
-    keyMessage: "The believer who understands the powers at work in their life is the believer who walks not in fear — but in confident, Christ-centred authority.",
   },
 ];
 
@@ -129,7 +132,7 @@ export default function BooksPage() {
       {/* Featured books — detailed layout */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto flex flex-col gap-16">
-          {books.slice(0, 2).map((book, i) => (
+          {books.slice(0, 5).map((book, i) => (
             <FadeIn key={book.title} delay={i * 0.1}>
               <div
                 className="rounded-3xl overflow-hidden"
@@ -197,7 +200,7 @@ export default function BooksPage() {
           </FadeIn>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {books.slice(2).map((book, i) => (
+            {books.slice(5).map((book, i) => (
               <FadeIn key={book.title} delay={i * 0.07}>
                 <div
                   className="rounded-2xl overflow-hidden flex flex-col group"
