@@ -136,6 +136,9 @@ export default function Footer() {
         <p className="mt-1 italic" style={{ color: "rgba(255,255,255,0.3)" }}>
           May grace and peace be multiplied to you.
         </p>
+        <p className="mt-2" style={{ color: "rgba(255,255,255,0.25)" }}>
+          Powered by <span style={{ color: "var(--gold)", opacity: 0.7 }}>Africa's fastest growing startup — T3S</span>
+        </p>
       </div>
     </footer>
   );
