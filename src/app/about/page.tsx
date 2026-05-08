@@ -347,13 +347,14 @@ export default function AboutPage() {
             <FadeIn direction="left">
               <div
                 className="rounded-2xl overflow-hidden relative"
-                style={{ aspectRatio: "4/3", boxShadow: "0 24px 64px rgba(0,0,0,0.15)" }}
+                style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.15)", background: "var(--navy)" }}
               >
                 <Image
                   src="/profile/family.jpg"
                   alt="Rev. Dr. Deegbe and family"
-                  fill
-                  className="object-cover object-center"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gold accent bar */}
