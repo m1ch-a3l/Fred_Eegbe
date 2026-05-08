@@ -33,7 +33,7 @@ export default function WelcomeSection() {
             style={{ color: "var(--warm-gray)", fontFamily: "var(--font-serif)" }}
           >
             Whether through books, teachings, or ministry, my prayer is that every encounter
-            with this work draws you closer to the Father, deeper into purpose, and higher in faith.
+            with this work draws you closer to the Lord, deeper into purpose, and higher in faith.
           </p>
         </FadeIn>
 
@@ -54,7 +54,7 @@ export default function WelcomeSection() {
               "But seek first his kingdom and his righteousness, and all these things will be given to you as well."
             </p>
             <p className="text-sm font-semibold tracking-wide" style={{ color: "var(--gold)" }}>
-              Matthew 6:33
+              Matthew 6:33 (NKJV)
             </p>
           </div>
         </FadeIn>

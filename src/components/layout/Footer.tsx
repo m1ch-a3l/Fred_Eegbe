@@ -41,7 +41,7 @@ export default function Footer() {
       >
         <p className="text-sm italic" style={{ color: "var(--gold-light, #F0E6C8)", fontFamily: "var(--font-serif)" }}>
           "For I know the plans I have for you, declares the Lord — plans to prosper you and not to harm you,
-          plans to give you hope and a future." — Jeremiah 29:11
+          plans to give you hope and a future." — Jeremiah 29:11 (NKJV)
         </p>
       </div>
 

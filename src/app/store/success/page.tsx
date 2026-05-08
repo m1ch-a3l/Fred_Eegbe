@@ -80,7 +80,7 @@ function SuccessContent() {
         <p className="text-sm italic text-center" style={{ color: "rgba(255,255,255,0.8)", fontFamily: "var(--font-serif)" }}>
           "May the God of hope fill you with all joy and peace as you trust in him."
         </p>
-        <p className="text-xs text-center mt-2" style={{ color: "var(--gold)" }}>Romans 15:13</p>
+        <p className="text-xs text-center mt-2" style={{ color: "var(--gold)" }}>Romans 15:13 (NKJV)</p>
       </div>
 
       <div className="flex flex-wrap gap-4 justify-center">

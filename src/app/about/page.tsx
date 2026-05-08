@@ -299,7 +299,7 @@ export default function AboutPage() {
                   className="mt-8 pt-6 text-sm italic"
                   style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-serif)" }}
                 >
-                  "As for me and my house, we will serve the Lord." — Joshua 24:15
+                  "As for me and my house, we will serve the Lord." — Joshua 24:15 (NKJV)
                 </div>
               </div>
             </div>

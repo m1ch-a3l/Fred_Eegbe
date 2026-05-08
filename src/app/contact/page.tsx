@@ -81,7 +81,7 @@ export default function ContactPage() {
                 "Ask and it will be given to you; seek and you will find; knock and the door will be opened."
               </p>
               <p className="text-xs mt-3 font-medium" style={{ color: "var(--gold)" }}>
-                Matthew 7:7
+                Matthew 7:7 (NKJV)
               </p>
             </div>
           </FadeIn>
