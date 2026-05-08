@@ -39,13 +39,13 @@ export default function Navbar() {
             className="font-bold text-xl tracking-wide transition-colors"
             style={{ fontFamily: "var(--font-heading)", color: scrolled ? "var(--navy)" : "white" }}
           >
-            Rev. Dr. Fred P. Deegbe
+            Rev. Dr. Frederick P. Deegbe
           </span>
           <span
             className="text-xs tracking-widest uppercase transition-colors"
             style={{ color: scrolled ? "var(--gold)" : "rgba(255,255,255,0.75)" }}
           >
-            Author & Ministry Leader
+            Theologian · Author · Statesman
           </span>
         </Link>
 

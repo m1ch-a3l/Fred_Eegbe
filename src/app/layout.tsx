@@ -24,10 +24,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rev. Dr. Fred P. Deegbe — Author, Teacher & Ministry Leader",
+  title: "Rev. Dr. Frederick P. Deegbe — Minister, Author & Statesman",
   description:
-    "Discover books, teachings, and ministry work from Rev. Dr. Fred P. Deegbe — a Christian author, teacher, and ministry leader called to transform lives through faith, purpose, and the Word of God.",
-  keywords: ["Christian author", "ministry", "faith", "teachings", "books", "Fred P. Deegbe"],
+    "Discover the life, books, and legacy of Rev. Dr. Frederick P. Deegbe — distinguished minister, theologian, lawyer, author, and statesman dedicated to faith, justice, and the transformation of lives.",
+  keywords: ["Christian author", "ministry", "faith", "Ghana", "books", "Frederick P. Deegbe", "Calvary Baptist Church", "Christian Council of Ghana"],
 };
 
 export default function RootLayout({

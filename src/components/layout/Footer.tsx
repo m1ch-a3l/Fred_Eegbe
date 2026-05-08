@@ -52,7 +52,7 @@ export default function Footer() {
             className="text-2xl font-bold mb-3"
             style={{ fontFamily: "var(--font-heading)", color: "white" }}
           >
-            Dr. Fred P. Deegbe
+            Dr. Frederick P. Deegbe
           </h3>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.6)" }}>
             Author, teacher, and ministry leader committed to helping people discover
@@ -131,7 +131,7 @@ export default function Footer() {
           color: "rgba(255,255,255,0.4)",
         }}
       >
-        <p>© {new Date().getFullYear()} Fred P. Deegbe Ministries. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Frederick P. Deegbe Ministries. All rights reserved.</p>
         <p className="mt-1 italic" style={{ color: "rgba(255,255,255,0.3)" }}>
           May grace and peace be multiplied to you.
         </p>

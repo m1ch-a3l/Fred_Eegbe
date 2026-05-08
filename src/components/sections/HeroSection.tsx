@@ -49,7 +49,7 @@ export default function HeroSection() {
               letterSpacing: "-0.02em",
             }}
           >
-            Rev. Dr. Fred
+            Rev. Dr. Frederick
             <br />
             P. Deegbe
           </h1>
