@@ -11,16 +11,30 @@ const books = [
     description: "A prophetic call back to authentic, Spirit-filled Christianity — confronting the creeping danger of religious form without transforming power.",
     theme: "Faith & Theology",
     image: "/books/hollow-faith.jpg",
-    bg: "linear-gradient(135deg, #0F2544 0%, #1E3A5F 100%)",
-    accent: "#C9A84C",
   },
   {
     title: "Thriving in Retirement",
     description: "Staying strong & healthy in your golden years — a biblical and practical guide to living with purpose, joy, and continued fruitfulness.",
     theme: "Life & Purpose",
     image: "/books/thriving-retirement.jpg",
-    bg: "linear-gradient(135deg, #7A5C20 0%, #C9A84C 100%)",
-    accent: "#fff",
+  },
+  {
+    title: "The Three Powers",
+    description: "Understanding the forces that shape your spiritual destiny — equipping believers to walk in genuine biblical authority and confidence.",
+    theme: "Spiritual Life",
+    image: "/books/the-three-powers.png",
+  },
+  {
+    title: "The Sticky Couple",
+    description: "Building a marriage that holds through every season — scriptural wisdom for couples who choose to hold on together through every trial.",
+    theme: "Marriage & Family",
+    image: "/books/the-sticky-couple.png",
+  },
+  {
+    title: "Stranger in My Own Country",
+    description: "Navigating faith, identity, and belonging in a changing world — remaining anchored when the ground beneath us shifts.",
+    theme: "Identity & Culture",
+    image: "/books/stranger-country.png",
   },
 ];
 
