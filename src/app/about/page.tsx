@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
-import { Scale, Globe, Users, Heart, Award } from "lucide-react";
+import { Scale, BookOpen, Globe, Users, Heart, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About — Rev. Dr. Frederick P. Deegbe",
