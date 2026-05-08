@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 const books = [
   {
     title: "Hollow Faith Is Powerless Religion",
-    year: "2022",
     theme: "Faith & Theology",
     image: "/books/hollow-faith.jpg",
     tagline: "A prophetic call back to authentic, Spirit-filled Christianity.",
@@ -23,7 +22,6 @@ const books = [
   },
   {
     title: "Thriving in Retirement",
-    year: "2024",
     theme: "Life & Purpose",
     image: "/books/thriving-retirement.jpg",
     tagline: "Staying strong & healthy in your golden years.",
@@ -97,12 +95,12 @@ export default function BooksPage() {
                   {/* Book details */}
                   <div className="md:col-span-2 p-10">
                     <div className="mb-3">
-                      <span
+                      {/* <span
                         className="text-xs font-medium px-3 py-1 rounded-full"
                         style={{ background: "rgba(201,168,76,0.1)", color: "var(--gold)" }}
                       >
                         {book.year}
-                      </span>
+                      </span> */}
                     </div>
                     <h2
                       className="text-2xl font-bold mb-2"
