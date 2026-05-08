@@ -96,44 +96,42 @@ export default function AboutPage() {
         </FadeIn>
       </div>
 
-      {/* Biography */}
+      {/* Biography — top: image + first 3 chapters */}
       <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
 
-          {/* Image — sticky so it stays visible as text scrolls */}
+          {/* Image */}
           <FadeIn direction="left">
-            <div className="md:sticky md:top-28">
+            <div
+              className="rounded-2xl relative overflow-hidden flex items-end"
+              style={{ aspectRatio: "3/4", boxShadow: "0 24px 64px rgba(0,0,0,0.18)" }}
+            >
+              <Image
+                src="/profile/author.png"
+                alt="Rev. Dr. Frederick P. Deegbe"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
               <div
-                className="rounded-2xl relative overflow-hidden flex items-end"
-                style={{ aspectRatio: "3/4", boxShadow: "0 24px 64px rgba(0,0,0,0.18)" }}
+                className="relative z-10 p-6 w-full"
+                style={{ background: "linear-gradient(to top, rgba(15,37,68,0.95) 0%, transparent 100%)" }}
               >
-                <Image
-                  src="/profile/author.png"
-                  alt="Rev. Dr. Frederick P. Deegbe"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                <div
-                  className="relative z-10 p-6 w-full"
-                  style={{ background: "linear-gradient(to top, rgba(15,37,68,0.92) 0%, transparent 100%)" }}
-                >
-                  <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
-                    Rev. Dr. Frederick P. Deegbe
-                  </p>
-                  <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
-                    Minister · Theologian · Lawyer · Author · Statesman
-                  </p>
-                </div>
+                <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+                  Rev. Dr. Frederick P. Deegbe
+                </p>
+                <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
+                  Minister · Theologian · Lawyer · Author · Statesman
+                </p>
               </div>
             </div>
           </FadeIn>
 
+          {/* First 3 chapters */}
           <FadeIn direction="right">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-9">
 
-              {/* Intro */}
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>Overview</span>
                 <h2 className="text-2xl font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
@@ -146,7 +144,6 @@ export default function AboutPage() {
 
               <div className="w-full h-px" style={{ background: "var(--border)" }} />
 
-              {/* Early Life */}
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>Early Life & Education</span>
                 <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
@@ -159,7 +156,6 @@ export default function AboutPage() {
 
               <div className="w-full h-px" style={{ background: "var(--border)" }} />
 
-              {/* The Call */}
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>The Call to Ministry</span>
                 <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
@@ -170,75 +166,82 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-px" style={{ background: "var(--border)" }} />
-
-              {/* Theological Formation */}
-              <div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>Theological Formation</span>
-                <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
-                  Shaped by Scholarship & Compassionate Service
-                </h3>
-                <p className="text-base leading-relaxed mb-3" style={{ color: "var(--warm-gray)" }}>
-                  To prepare himself for ministry, he undertook theological studies in the United States, earning ministerial masters and doctoral degrees from Southwestern Baptist Theological Seminary and Asbury Theological Seminary respectively. These formative years deepened his theological insight and shaped his compassionate, people-centred approach to ministry.
-                </p>
-                <p className="text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                  Throughout his distinguished career, Rev. Dr. Deegbe has served faithfully in numerous pastoral and ministerial roles. He ministered as a Chaplain at Baylor University Medical Center, where he offered spiritual care and comfort to patients and families during some of life's most difficult moments. He also served as a lecturer at Ghana Baptist Seminary, mentoring and shaping future generations of Christian leaders.
-                </p>
-              </div>
-
-              <div className="w-full h-px" style={{ background: "var(--border)" }} />
-
-              {/* Pastoral Ministry */}
-              <div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>Pastoral Ministry</span>
-                <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
-                  A Shepherd's Heart Over Three Decades
-                </h3>
-                <p className="text-base leading-relaxed mb-3" style={{ color: "var(--warm-gray)" }}>
-                  His pastoral leadership became especially impactful during his tenure as Senior Pastor of New Tafo Baptist Church, now known as Central Baptist Church, Kumasi. He continued to distinguish himself as a faithful servant at Calvary Baptist Church serving as Senior Pastor from 1991 to 2024.
-                </p>
-                <p className="text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                  Rev. Dr. Deegbe devoted over three decades to building a vibrant, compassionate, and spiritually grounded church community. Under his leadership, countless individuals encountered faith, healing, restoration, and renewed purpose.
-                </p>
-              </div>
-
-              <div className="w-full h-px" style={{ background: "var(--border)" }} />
-
-              {/* National Leadership */}
-              <div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>National Leadership</span>
-                <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
-                  A Voice for Unity, Justice & Ethical Leadership
-                </h3>
-                <p className="text-base leading-relaxed mb-3" style={{ color: "var(--warm-gray)" }}>
-                  Beyond the pulpit, Rev. Dr. Deegbe emerged as one of Ghana's most respected Christian leaders. He served as President of the Ghana Baptist Convention from 1992 to 2000, providing visionary leadership during a significant period in the Convention's history. He later served as General Secretary of the Christian Council of Ghana from 2003 to 2013, where he became a strong moral voice on national issues, championing unity, justice, peace, and ethical leadership.
-                </p>
-                <p className="text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                  Combining his legal background with deep ministerial experience, Rev. Dr. Deegbe contributed immensely to national development through service on several important national and international boards and institutions. These included the Ghana AIDS Commission, Ghana Anti-Corruption Coalition, Coalition of Domestic Election Observers, National Media Commission, Narcotics Control Board, All Africa Conference of Churches, Fellowship of Christian Councils and Churches in West Africa, and the Christian Community Mutual Fund, among others. In every sphere, he brought wisdom, integrity, courage, and a deeply principled Christian perspective.
-                </p>
-              </div>
-
-              <div className="w-full h-px" style={{ background: "var(--border)" }} />
-
-              {/* Legacy */}
-              <div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>Legacy</span>
-                <h3 className="text-lg font-bold mt-2 mb-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
-                  A Life Wholly Surrendered
-                </h3>
-                <p className="text-base leading-relaxed mb-3" style={{ color: "var(--warm-gray)" }}>
-                  A gifted communicator and thoughtful author, Rev. Dr. Deegbe has also enriched many lives through his writings. His books reflect profound spiritual insight, practical wisdom, and an honest engagement with the realities of life and faith.
-                </p>
-                <p className="text-base leading-relaxed mb-3" style={{ color: "var(--warm-gray)" }}>
-                  At the heart of all his accomplishments is a devoted family man whose life reflects love, faithfulness, and grace. Rev. Dr. Frederick P. Deegbe is happily married to his beloved wife, Lady Joana, and together they have been blessed with three adult children, and seven grandchildren. Their enduring partnership stands as a testimony to the values of faith, commitment, and Christian family life that he has passionately taught throughout his ministry.
-                </p>
-                <p className="text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
-                  Rev. Dr. Frederick P. Deegbe's life story is one of courage, sacrifice, compassion, and enduring faith. From the courtroom to the pulpit, from theological classrooms to national leadership platforms, he has consistently demonstrated what it means to live a life wholly surrendered to God and committed to the service of others. His legacy continues to inspire generations within Ghana and beyond.
-                </p>
-              </div>
-
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Biography — bottom: remaining 4 chapters in 2-col cards */}
+      <section className="pb-24 px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {[
+            {
+              label: "Theological Formation",
+              title: "Shaped by Scholarship & Compassionate Service",
+              paras: [
+                "To prepare himself for ministry, he undertook theological studies in the United States, earning ministerial masters and doctoral degrees from Southwestern Baptist Theological Seminary and Asbury Theological Seminary respectively. These formative years deepened his theological insight and shaped his compassionate, people-centred approach to ministry.",
+                "Throughout his distinguished career, Rev. Dr. Deegbe has served faithfully in numerous pastoral and ministerial roles. He ministered as a Chaplain at Baylor University Medical Center, where he offered spiritual care and comfort to patients and families during some of life's most difficult moments. He also served as a lecturer at Ghana Baptist Seminary, mentoring and shaping future generations of Christian leaders.",
+              ],
+            },
+            {
+              label: "Pastoral Ministry",
+              title: "A Shepherd's Heart Over Three Decades",
+              paras: [
+                "His pastoral leadership became especially impactful during his tenure as Senior Pastor of New Tafo Baptist Church, now known as Central Baptist Church, Kumasi. He continued to distinguish himself as a faithful servant at Calvary Baptist Church serving as Senior Pastor from 1991 to 2024.",
+                "Rev. Dr. Deegbe devoted over three decades to building a vibrant, compassionate, and spiritually grounded church community. Under his leadership, countless individuals encountered faith, healing, restoration, and renewed purpose.",
+              ],
+            },
+            {
+              label: "National Leadership",
+              title: "A Voice for Unity, Justice & Ethical Leadership",
+              paras: [
+                "Beyond the pulpit, Rev. Dr. Deegbe emerged as one of Ghana's most respected Christian leaders. He served as President of the Ghana Baptist Convention from 1992 to 2000, providing visionary leadership during a significant period in the Convention's history. He later served as General Secretary of the Christian Council of Ghana from 2003 to 2013, where he became a strong moral voice on national issues, championing unity, justice, peace, and ethical leadership.",
+                "Combining his legal background with deep ministerial experience, Rev. Dr. Deegbe contributed immensely to national development through service on several important national and international boards and institutions. These included the Ghana AIDS Commission, Ghana Anti-Corruption Coalition, Coalition of Domestic Election Observers, National Media Commission, Narcotics Control Board, All Africa Conference of Churches, Fellowship of Christian Councils and Churches in West Africa, and the Christian Community Mutual Fund, among others. In every sphere, he brought wisdom, integrity, courage, and a deeply principled Christian perspective.",
+              ],
+            },
+            {
+              label: "Legacy",
+              title: "A Life Wholly Surrendered",
+              paras: [
+                "A gifted communicator and thoughtful author, Rev. Dr. Deegbe has also enriched many lives through his writings. His books reflect profound spiritual insight, practical wisdom, and an honest engagement with the realities of life and faith.",
+                "At the heart of all his accomplishments is a devoted family man whose life reflects love, faithfulness, and grace. Rev. Dr. Frederick P. Deegbe is happily married to his beloved wife, Lady Joana, and together they have been blessed with three adult children, and seven grandchildren. Their enduring partnership stands as a testimony to the values of faith, commitment, and Christian family life that he has passionately taught throughout his ministry.",
+                "Rev. Dr. Frederick P. Deegbe's life story is one of courage, sacrifice, compassion, and enduring faith. From the courtroom to the pulpit, from theological classrooms to national leadership platforms, he has consistently demonstrated what it means to live a life wholly surrendered to God and committed to the service of others. His legacy continues to inspire generations within Ghana and beyond.",
+              ],
+            },
+          ].map((chapter, i) => (
+            <FadeIn key={chapter.label} delay={i * 0.08}>
+              <div
+                className="p-8 rounded-2xl h-full flex flex-col gap-4"
+                style={{
+                  background: "white",
+                  border: "1px solid var(--border)",
+                  boxShadow: "0 2px 20px rgba(0,0,0,0.05)",
+                }}
+              >
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "var(--gold)" }}>
+                    {chapter.label}
+                  </span>
+                  <h3 className="text-base font-bold mt-2" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
+                    {chapter.title}
+                  </h3>
+                </div>
+                <div
+                  className="w-10 h-0.5 rounded-full"
+                  style={{ background: "var(--gold)", opacity: 0.5 }}
+                />
+                <div className="flex flex-col gap-3 flex-1">
+                  {chapter.paras.map((p, j) => (
+                    <p key={j} className="text-sm leading-relaxed" style={{ color: "var(--warm-gray)" }}>
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+
         </div>
       </section>
 
