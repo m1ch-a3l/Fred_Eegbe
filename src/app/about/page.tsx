@@ -4,9 +4,24 @@ import FadeIn from "@/components/ui/FadeIn";
 import { Scale, BookOpen, Globe, Users, Heart, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — Rev. Dr. Frederick P. Deegbe",
+  title: "About",
   description:
-    "Learn about Rev. Dr. Frederick P. Deegbe — distinguished minister, teacher, lawyer, author, and statesman whose life has been marked by unwavering devotion to God, selfless leadership, and dedicated service to humanity.",
+    "Learn about Rev. Dr. Frederick P. Deegbe — distinguished minister, theologian, lawyer, author, and statesman. Born in Keta, Ghana. Former Senior Pastor of Calvary Baptist Church, Accra (1991–2024).",
+  keywords: [
+    "Rev Dr Frederick Deegbe biography",
+    "Calvary Baptist Church Accra pastor",
+    "Ghana Baptist Convention president",
+    "Christian Council of Ghana general secretary",
+    "Ghanaian theologian",
+    "Frederick Deegbe minister",
+  ],
+  openGraph: {
+    title: "About Rev. Dr. Frederick P. Deegbe",
+    description:
+      "Distinguished minister, theologian, lawyer, author, and statesman. A life wholly surrendered to God and committed to the service of others.",
+    images: [{ url: "/profile/author.png", alt: "Rev. Dr. Frederick P. Deegbe" }],
+  },
+  alternates: { canonical: "https://fredeegbe.com/about" },
 };
 
 const milestones = [

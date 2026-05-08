@@ -5,8 +5,28 @@ import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Books — Rev. Dr. Frederick P. Deegbe",
-  description: "Books by Rev. Dr. Frederick P. Deegbe — Ghanaian church statesman, theologian and author committed to equipping the body of Christ.",
+  title: "Books",
+  description:
+    "Books by Rev. Dr. Frederick P. Deegbe — Hollow Faith, Thriving in Retirement, The Three Powers, The Sticky Couple, Stranger in My Own Country, and more. Purchase Christian books from Ghana's foremost church statesman.",
+  keywords: [
+    "Hollow Faith Is Powerless Religion",
+    "Thriving in Retirement book",
+    "The Three Powers Fred Deegbe",
+    "The Sticky Couple book",
+    "Stranger in My Own Country",
+    "Forgive God book",
+    "Born to Blossom",
+    "Christian books Ghana",
+    "Frederick Deegbe books",
+    "buy Christian books Accra",
+  ],
+  openGraph: {
+    title: "Books by Rev. Dr. Frederick P. Deegbe",
+    description:
+      "10 books of faith, purpose, marriage, and spiritual life by Rev. Dr. Frederick P. Deegbe — available for order across Ghana.",
+    images: [{ url: "/books/hollow-faith.jpg", alt: "Hollow Faith Is Powerless Religion" }],
+  },
+  alternates: { canonical: "https://fredeegbe.com/books" },
 };
 
 const books = [
