@@ -136,9 +136,29 @@ export default function Footer() {
         <p className="mt-1 italic" style={{ color: "rgba(255,255,255,0.3)" }}>
           May grace and peace be multiplied to you.
         </p>
-        <p className="mt-2" style={{ color: "rgba(255,255,255,0.25)" }}>
-          Powered by <span style={{ color: "var(--gold)", opacity: 0.7 }}>Africa's fastest growing startup — T3S</span>
-        </p>
+        <div className="mt-3 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+            Powered by —{" "}
+            <a
+              href="https://t3sinnovation.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold transition-opacity hover:opacity-100"
+              style={{ color: "var(--gold)", opacity: 0.8 }}
+            >
+              T3S Innovation
+            </a>
+          </p>
+          <p className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.25)" }}>
+            Africa&apos;s fastest growing Startup
+          </p>
+          <p className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.2)" }}>
+            <a href="mailto:support@t3sinnovation.com" className="hover:opacity-60 transition-opacity" style={{ color: "rgba(255,255,255,0.3)" }}>
+              support@t3sinnovation.com
+            </a>
+            {" · "}0552 528 315
+          </p>
+        </div>
       </div>
     </footer>
   );
