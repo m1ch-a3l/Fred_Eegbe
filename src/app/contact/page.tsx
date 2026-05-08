@@ -65,7 +65,7 @@ export default function ContactPage() {
                 Phone
               </h3>
               <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
-                +233 XX XXX XXXX
+                0244 253 627
               </p>
             </div>
 
