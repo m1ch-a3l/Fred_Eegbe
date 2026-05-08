@@ -28,7 +28,7 @@ export default function HeroSection() {
             fill
             className="object-contain"
             style={{ objectPosition: "center 20%" }}
-            sizes="100vw"
+            sizes="(max-width: 768px) 90vw, 100vw"
             priority
           />
           {/* Subtle bottom fade into the dark content area below */}
