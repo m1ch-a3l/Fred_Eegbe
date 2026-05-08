@@ -51,9 +51,9 @@ export default function ContactPage() {
               <h3 className="font-semibold text-sm mb-1" style={{ color: "var(--navy)", fontFamily: "var(--font-heading)" }}>
                 Email Us
               </h3>
-              <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
-                hello@fredeegbe.com
-              </p>
+              <a href="mailto:Fdeegbe@gmail.com" className="text-sm hover:opacity-70 transition-opacity" style={{ color: "var(--warm-gray)" }}>
+                Fdeegbe@gmail.com
+              </a>
             </div>
 
             <div
@@ -67,6 +67,18 @@ export default function ContactPage() {
               <p className="text-sm" style={{ color: "var(--warm-gray)" }}>
                 0244 253 627
               </p>
+            </div>
+
+            <div
+              className="p-7 rounded-2xl"
+              style={{ background: "var(--cream)", border: "1px solid var(--border)" }}
+            >
+              <Phone size={20} className="mb-3" style={{ color: "var(--gold)" }} />
+              <h3 className="font-semibold text-sm mb-1" style={{ color: "var(--navy)", fontFamily: "var(--font-heading)" }}>
+                Online RSVP
+              </h3>
+              <p className="text-sm font-medium mb-0.5" style={{ color: "var(--navy)" }}>Joana Deegbe</p>
+              <p className="text-sm" style={{ color: "var(--warm-gray)" }}>0243 434 255</p>
             </div>
 
             <div
