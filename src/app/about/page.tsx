@@ -367,28 +367,22 @@ export default function AboutPage() {
 
             {/* Text */}
             <FadeIn direction="right">
-              <div
-                className="p-10 rounded-2xl relative overflow-hidden h-full flex flex-col justify-center"
-                style={{ background: "var(--deep-blue)", border: "1px solid rgba(255,255,255,0.08)" }}
-              >
+              <div className="flex flex-col justify-center h-full gap-6">
+                <p className="text-base leading-relaxed" style={{ color: "var(--warm-gray)" }}>
+                  Rev. Dr. Deegbe is happily married to his beloved wife,{" "}
+                  <span>Lady Joana Deegbe</span>. Together they have been
+                  blessed with three adult children and seven grandchildren. Their enduring partnership stands as a
+                  testimony to the values of faith, commitment, and Christian family life he has passionately taught
+                  throughout his ministry.
+                </p>
                 <div
-                  className="absolute inset-0 opacity-10 pointer-events-none"
-                  style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(201,168,76,0.6) 0%, transparent 70%)" }}
-                />
-                <div className="relative z-10">
-                  <p className="text-base leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.8)" }}>
-                    Rev. Dr. Deegbe is happily married to his beloved wife,{" "}
-                    <span className="text-white font-semibold">Lady Joana Deegbe</span>. Together they have been
-                    blessed with three adult children and seven grandchildren. Their enduring partnership stands as a
-                    testimony to the values of faith, commitment, and Christian family life he has passionately taught
-                    throughout his ministry.
+                  className="pl-5 py-3 rounded-r-lg"
+                  style={{ borderLeft: "3px solid var(--gold)", background: "rgba(201,168,76,0.04)" }}
+                >
+                  <p className="text-sm italic" style={{ fontFamily: "var(--font-serif)", color: "var(--deep-blue)" }}>
+                    "As for me and my house, we will serve the Lord."
                   </p>
-                  <div
-                    className="pt-6 text-sm italic"
-                    style={{ borderTop: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-serif)" }}
-                  >
-                    "As for me and my house, we will serve the Lord." — Joshua 24:15 (NKJV)
-                  </div>
+                  <p className="text-xs mt-1 font-semibold" style={{ color: "var(--gold)" }}>Joshua 24:15 (NKJV)</p>
                 </div>
               </div>
             </FadeIn>
