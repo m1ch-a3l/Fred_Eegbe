@@ -99,29 +99,33 @@ export default function AboutPage() {
       {/* Biography */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+          {/* Image — sticky so it stays visible as text scrolls */}
           <FadeIn direction="left">
-            <div
-              className="rounded-2xl relative overflow-hidden flex items-end"
-              style={{ aspectRatio: "3/4", boxShadow: "0 24px 64px rgba(0,0,0,0.18)" }}
-            >
-              <Image
-                src="/profile/author.png"
-                alt="Rev. Dr. Frederick P. Deegbe"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+            <div className="md:sticky md:top-28">
               <div
-                className="relative z-10 p-6 w-full"
-                style={{ background: "linear-gradient(to top, rgba(15,37,68,0.92) 0%, transparent 100%)" }}
+                className="rounded-2xl relative overflow-hidden flex items-end"
+                style={{ aspectRatio: "3/4", boxShadow: "0 24px 64px rgba(0,0,0,0.18)" }}
               >
-                <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
-                  Rev. Dr. Frederick P. Deegbe
-                </p>
-                <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
-                  Minister · Theologian · Lawyer · Author · Statesman
-                </p>
+                <Image
+                  src="/profile/author.png"
+                  alt="Rev. Dr. Frederick P. Deegbe"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                <div
+                  className="relative z-10 p-6 w-full"
+                  style={{ background: "linear-gradient(to top, rgba(15,37,68,0.92) 0%, transparent 100%)" }}
+                >
+                  <p className="text-white font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+                    Rev. Dr. Frederick P. Deegbe
+                  </p>
+                  <p className="text-xs mt-1" style={{ color: "var(--gold)" }}>
+                    Minister · Theologian · Lawyer · Author · Statesman
+                  </p>
+                </div>
               </div>
             </div>
           </FadeIn>
