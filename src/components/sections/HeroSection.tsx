@@ -20,13 +20,14 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Photo — full width, fixed height, no text on top */}
-        <div className="relative w-full" style={{ height: "52vw", minHeight: 220 }}>
+        {/* Photo — full width, dropped slightly so figure sits lower */}
+        <div className="relative w-full" style={{ height: "65vw", minHeight: 260 }}>
           <Image
             src="/profile/author.png"
             alt="Rev. Dr. Fred P. Deegbe"
             fill
-            className="object-contain object-center"
+            className="object-contain"
+            style={{ objectPosition: "center 20%" }}
             sizes="100vw"
             priority
           />
@@ -64,9 +65,9 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-3 items-center pt-1">
             <Link
               href="/books"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm"
+              className="hero-btn flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm"
               style={{
-                background: "var(--gold)",
+                background: "linear-gradient(135deg, #D4A847 0%, #C9A84C 50%, #B8923A 100%)",
                 color: "white",
                 boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
               }}
@@ -76,7 +77,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="/about"
-              className="text-sm font-medium"
+              className="text-sm font-medium transition-colors duration-200 hover:text-white"
               style={{
                 color: "rgba(255,255,255,0.5)",
                 textDecoration: "underline",
@@ -94,13 +95,14 @@ export default function HeroSection() {
         className="relative hidden md:block overflow-hidden"
         style={{ background: "#0B1628", minHeight: "100svh" }}
       >
-        {/* Photo — right 52%, full height */}
+        {/* Photo — right 52%, dropped so figure sits naturally lower */}
         <div className="absolute top-0 bottom-0 right-0 w-[52%]">
           <Image
             src="/profile/author.png"
             alt="Rev. Dr. Fred P. Deegbe"
             fill
-            className="object-contain object-top"
+            className="object-contain"
+            style={{ objectPosition: "center 15%" }}
             sizes="52vw"
             priority
           />
@@ -129,19 +131,19 @@ export default function HeroSection() {
           style={{ minHeight: "100svh" }}
         >
           <div className="max-w-xs">
-            <span
+            {/* <span
               className="text-xs uppercase tracking-[0.22em] font-semibold"
               style={{ color: "var(--gold)" }}
             >
               Author · Church Statesman
-            </span>
-            <br />
-            <span
+            </span> */}
+            {/* <br /> */}
+            {/* <span
               className="text-xs uppercase tracking-[0.18em] font-medium"
               style={{ color: "rgba(255,255,255,0.35)" }}
             >
               Accra, Ghana
-            </span>
+            </span> */}
             <p
               className="mt-4 text-[11px] leading-relaxed uppercase tracking-wide"
               style={{ color: "rgba(255,255,255,0.4)" }}
@@ -171,9 +173,9 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-4 items-center pb-2">
               <Link
                 href="/books"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:-translate-y-0.5"
+                className="hero-btn flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm"
                 style={{
-                  background: "var(--gold)",
+                  background: "linear-gradient(135deg, #D4A847 0%, #C9A84C 50%, #B8923A 100%)",
                   color: "white",
                   boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
                 }}
@@ -183,7 +185,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium transition-opacity hover:opacity-100"
+                className="text-sm font-medium transition-colors duration-200 hover:text-white"
                 style={{
                   color: "rgba(255,255,255,0.55)",
                   textDecoration: "underline",
