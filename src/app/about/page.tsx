@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
-import { Scale, BookOpen, Globe, Users, Heart, Award } from "lucide-react";
+import { Scale, Globe, Users, Heart, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About — Rev. Dr. Frederick P. Deegbe",
@@ -59,16 +59,16 @@ const credentials = [
 ];
 
 const books = [
-  "When Friends Fight",
-  "Born to Blossom",
-  "Empowered to Make Life Meaningful",
-  "Building a Christian Home",
-  "Forgive God!",
-  "The Three Powers",
-  "Thriving in Retirement",
-  "Hollow Faith",
-  "The Sticky Couple",
-  "Stranger in My Own Country",
+  { title: "Hollow Faith Is Powerless Religion", image: "/books/hollow-faith.jpg" },
+  { title: "Thriving in Retirement",             image: "/books/thriving-retirement.jpg" },
+  { title: "The Three Powers",                   image: "/books/the-three-powers.png" },
+  { title: "The Sticky Couple",                  image: "/books/the-sticky-couple.png" },
+  { title: "Stranger in My Own Country",         image: "/books/stranger-country.png" },
+  { title: "Forgive God!",                       image: "/books/forgive-god.png" },
+  { title: "Born to Blossom",                    image: "/books/born-to-blossom.png" },
+  { title: "When Friends Fight",                 image: "/books/when-friends-fight.png" },
+  { title: "Building a Christian Home",          image: "/books/building-a-christian-home.png" },
+  { title: "Empowered to Make Life Meaningful",  image: "/books/empowered-meaningful.png" },
 ];
 
 export default function AboutPage() {
@@ -305,23 +305,26 @@ export default function AboutPage() {
             </p>
           </FadeIn>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {books.map((title, i) => (
-              <FadeIn key={title} delay={i * 0.05}>
+            {books.map((book, i) => (
+              <FadeIn key={book.title} delay={i * 0.05}>
                 <div
-                  className="p-4 rounded-xl text-center text-sm font-medium leading-snug"
-                  style={{
-                    background: "white",
-                    border: "1px solid var(--border)",
-                    color: "var(--navy)",
-                    fontFamily: "var(--font-heading)",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
-                  }}
+                  className="rounded-xl overflow-hidden group"
+                  style={{ border: "1px solid var(--border)", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
                 >
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mx-auto mb-3"
-                    style={{ background: "rgba(201,168,76,0.15)" }}>
-                    <BookOpen size={12} style={{ color: "var(--gold)" }} />
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                    <Image
+                      src={book.image}
+                      alt={book.title}
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    />
                   </div>
-                  {title}
+                  <div className="px-3 py-2" style={{ background: "white" }}>
+                    <p className="text-xs font-semibold leading-snug text-center" style={{ color: "var(--navy)", fontFamily: "var(--font-heading)" }}>
+                      {book.title}
+                    </p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -331,42 +334,64 @@ export default function AboutPage() {
 
       {/* Family */}
       <section className="py-24 px-6" style={{ background: "var(--cream)" }}>
-        <div className="max-w-3xl mx-auto">
-          <FadeIn>
-            <div
-              className="p-10 rounded-2xl text-center relative overflow-hidden"
-              style={{ background: "var(--deep-blue)", border: "1px solid rgba(255,255,255,0.08)" }}
-            >
+        <div className="max-w-5xl mx-auto">
+          <FadeIn className="text-center mb-14">
+            <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>Family</span>
+            <h2 className="text-3xl font-bold mt-3" style={{ fontFamily: "var(--font-heading)", color: "var(--navy)" }}>
+              Rooted in Love
+            </h2>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Family photo */}
+            <FadeIn direction="left">
               <div
-                className="absolute inset-0 opacity-10"
-                style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(201,168,76,0.6) 0%, transparent 70%)" }}
-              />
-              <div className="relative z-10">
-                <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "var(--gold)" }}>
-                  Family
-                </span>
-                <h2
-                  className="text-3xl font-bold mt-3 mb-6 text-white"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  Rooted in Love
-                </h2>
-                <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
-                  Rev. Dr. Deegbe is happily married to his beloved wife,{" "}
-                  <span className="text-white font-semibold">Lady Joana Deegbe</span>. Together they have been
-                  blessed with three adult children and seven grandchildren. Their enduring partnership stands as a
-                  testimony to the values of faith, commitment, and Christian family life he has passionately taught
-                  throughout his ministry.
-                </p>
+                className="rounded-2xl overflow-hidden relative"
+                style={{ aspectRatio: "4/3", boxShadow: "0 24px 64px rgba(0,0,0,0.15)" }}
+              >
+                <Image
+                  src="/profile/family.jpg"
+                  alt="Rev. Dr. Deegbe and family"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                {/* Gold accent bar */}
                 <div
-                  className="mt-8 pt-6 text-sm italic"
-                  style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-serif)" }}
-                >
-                  "As for me and my house, we will serve the Lord." — Joshua 24:15 (NKJV)
+                  className="absolute bottom-0 left-0 right-0 h-1"
+                  style={{ background: "linear-gradient(to right, var(--gold), rgba(201,168,76,0.3))" }}
+                />
+              </div>
+            </FadeIn>
+
+            {/* Text */}
+            <FadeIn direction="right">
+              <div
+                className="p-10 rounded-2xl relative overflow-hidden h-full flex flex-col justify-center"
+                style={{ background: "var(--deep-blue)", border: "1px solid rgba(255,255,255,0.08)" }}
+              >
+                <div
+                  className="absolute inset-0 opacity-10 pointer-events-none"
+                  style={{ backgroundImage: "radial-gradient(circle at 50% 0%, rgba(201,168,76,0.6) 0%, transparent 70%)" }}
+                />
+                <div className="relative z-10">
+                  <p className="text-base leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.8)" }}>
+                    Rev. Dr. Deegbe is happily married to his beloved wife,{" "}
+                    <span className="text-white font-semibold">Lady Joana Deegbe</span>. Together they have been
+                    blessed with three adult children and seven grandchildren. Their enduring partnership stands as a
+                    testimony to the values of faith, commitment, and Christian family life he has passionately taught
+                    throughout his ministry.
+                  </p>
+                  <div
+                    className="pt-6 text-sm italic"
+                    style={{ borderTop: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-serif)" }}
+                  >
+                    "As for me and my house, we will serve the Lord." — Joshua 24:15 (NKJV)
+                  </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
