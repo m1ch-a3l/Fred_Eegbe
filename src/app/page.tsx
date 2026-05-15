@@ -4,7 +4,6 @@ import WelcomeSection from "@/components/sections/WelcomeSection";
 import FeaturedBooksSection from "@/components/sections/FeaturedBooksSection";
 import WordOfMonthSection from "@/components/sections/WordOfMonthSection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
-import HomepageAd from "@/components/ui/HomepageAd";
 
 export const metadata: Metadata = {
   title: "Rev. Dr. Frederick P. Deegbe — Minister, Author & Statesman",
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <HomepageAd />
       <HeroSection />
       <WelcomeSection />
       <FeaturedBooksSection />
