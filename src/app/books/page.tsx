@@ -160,12 +160,12 @@ export default function BooksPage() {
               >
                 <div className="grid grid-cols-1 md:grid-cols-3">
                   {/* Cover */}
-                  <div className="relative min-h-80 md:min-h-full overflow-hidden">
+                  <div className="relative min-h-80 md:min-h-full overflow-hidden" style={{ background: "var(--cream)" }}>
                     <Image
                       src={book.image}
                       alt={book.title}
                       fill
-                      className="object-cover object-center"
+                      className="object-contain"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute inset-x-0 bottom-0 h-20" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)" }} />
@@ -227,12 +227,12 @@ export default function BooksPage() {
                   style={{ background: "white", border: "1px solid var(--border)", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}
                 >
                   {/* Cover */}
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "3/4", background: "var(--cream)" }}>
                     <Image
                       src={book.image}
                       alt={book.title}
                       fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     />
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
