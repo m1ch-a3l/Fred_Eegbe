@@ -84,11 +84,6 @@ export default function FeaturedBooksSection() {
       className="py-20 px-6 relative overflow-hidden"
       style={{ background: "linear-gradient(160deg, var(--navy) 0%, var(--deep-blue) 100%)" }}
     >
-      {/* Ambient glow removed */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-      />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
