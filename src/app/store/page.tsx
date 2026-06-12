@@ -117,7 +117,6 @@ function AddToCartButton({ book }: { book: typeof books[0] }) {
       style={{
         background: added || inCart ? "var(--forest)" : "var(--gold)",
         color: "white",
-        boxShadow: "0 4px 20px rgba(201,168,76,0.3)",
       }}
     >
       {added || inCart ? <Check size={15} /> : <ShoppingCart size={15} />}

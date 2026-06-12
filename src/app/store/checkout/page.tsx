@@ -172,7 +172,6 @@ export default function CheckoutPage() {
               style={{
                 background: "var(--gold)",
                 color: "white",
-                boxShadow: "0 6px 24px rgba(201,168,76,0.4)",
               }}
             >
               <Lock size={15} />

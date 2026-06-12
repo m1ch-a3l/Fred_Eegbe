@@ -45,7 +45,6 @@ body {
 }
 .hero-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(201, 168, 76, 0.55) !important;
 }
 .hero-btn:hover::after {
   transform: translateX(100%);

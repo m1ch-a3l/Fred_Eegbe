@@ -8,19 +8,11 @@ export default function AuthorPortrait() {
   return (
     <div
       className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10"
-      style={{ filter: "drop-shadow(0 24px 48px rgba(0,0,0,0.35))" }}
     >
-      {/* Outer gold glow ring */}
-      <div
-        className="rounded-full p-1"
-        style={{
-          background: "linear-gradient(135deg, var(--gold) 0%, rgba(201,168,76,0.4) 50%, var(--gold) 100%)",
-        }}
-      >
-        {/* White spacer ring */}
-        <div className="rounded-full p-1 bg-white">
-          {/* Portrait circle */}
-          <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden"
+      {/* Portrait ring */}
+      <div className="rounded-full p-1 bg-white">
+        {/* Portrait circle */}
+        <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden"
             style={{ background: "linear-gradient(135deg, #1E3A5F 0%, #0F2544 100%)" }}>
             {!imgError ? (
               <Image
@@ -49,7 +41,6 @@ export default function AuthorPortrait() {
             )}
           </div>
         </div>
-      </div>
     </div>
   );
 }

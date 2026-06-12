@@ -69,7 +69,6 @@ export default function HeroSection() {
               style={{
                 background: "linear-gradient(135deg, #D4A847 0%, #C9A84C 50%, #B8923A 100%)",
                 color: "white",
-                boxShadow: "0 4px 20px rgba(201,168,76,0.35)",
               }}
             >
               <BookOpen size={14} />
@@ -177,7 +176,6 @@ export default function HeroSection() {
                 style={{
                   background: "linear-gradient(135deg, #D4A847 0%, #C9A84C 50%, #B8923A 100%)",
                   color: "white",
-                  boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
                 }}
               >
                 <BookOpen size={15} />

@@ -126,8 +126,6 @@ export default function FeaturedBooksSection() {
                 <div
                   style={{
                     position: "relative",
-                    filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.7))",
-                    transform: "perspective(900px) rotateY(current === 0 ? 6deg : -6deg)",
                   }}
                 >
                   {/* Spine */}
@@ -149,16 +147,6 @@ export default function FeaturedBooksSection() {
                       priority
                     />
                   </div>
-                  {/* Reflection */}
-                  <div
-                    className="absolute -bottom-6 left-0 right-0 h-6 rounded-b-sm"
-                    style={{
-                      background: "linear-gradient(to bottom, rgba(255,255,255,0.08), transparent)",
-                      transform: "scaleY(-1)",
-                      opacity: 0.3,
-                      filter: "blur(4px)",
-                    }}
-                  />
                 </div>
               </div>
 
@@ -196,7 +184,6 @@ export default function FeaturedBooksSection() {
                     style={{
                       background: "var(--gold)",
                       color: "white",
-                      boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
                     }}
                   >
                     <ShoppingCart size={14} />
