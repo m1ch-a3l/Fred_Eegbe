@@ -17,23 +17,6 @@ export default function NewsletterSection() {
       className="py-28 px-6 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%)" }}
     >
-      {/* Background orbs */}
-      <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          width: 500, height: 500, right: "-15%", top: "-20%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%)",
-          filter: "blur(40px)",
-        }}
-      />
-      <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          width: 400, height: 400, left: "-10%", bottom: "-10%",
-          background: "radial-gradient(circle, rgba(122,158,126,0.08) 0%, transparent 70%)",
-          filter: "blur(50px)",
-        }}
-      />
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <FadeIn>
