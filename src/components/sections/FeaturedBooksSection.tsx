@@ -84,14 +84,10 @@ export default function FeaturedBooksSection() {
       className="py-20 px-6 relative overflow-hidden"
       style={{ background: "linear-gradient(160deg, var(--navy) 0%, var(--deep-blue) 100%)" }}
     >
-      {/* Ambient glow that changes with book */}
+      {/* Ambient glow removed */}
       <div
-        className="absolute inset-0 pointer-events-none transition-all duration-700"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: current === 0
-            ? "radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%)"
-            : "radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.12) 0%, transparent 60%)",
-        }}
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
